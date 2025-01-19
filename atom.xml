@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-19T05:18:27.637Z</updated>
+  <updated>2025-01-19T05:50:55.846Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>以前用cocos制作的小游戏</title>
+    <link href="https://cocosgames.com/2025/01/19/catchit/"/>
+    <id>https://cocosgames.com/2025/01/19/catchit/</id>
+    <published>2025-01-19T05:49:00.688Z</published>
+    <updated>2025-01-19T05:50:55.846Z</updated>
+    
+    <content type="html"><![CDATA[<p>已经商用.<br><img src="/assets/catchit/4942dae9fbcd90ec6866c8ee6c83953b0f0dea48.gif" alt="image"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;已经商用.&lt;br&gt;&lt;img src=&quot;/assets/catchit/4942dae9fbcd90ec6866c8ee6c83953b0f0dea48.gif&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    
+  </entry>
+  
+  <entry>
     <title>又换引擎了 -- OpenFL!</title>
     <link href="https://cocosgames.com/2025/01/19/OpenFL/"/>
     <id>https://cocosgames.com/2025/01/19/OpenFL/</id>
     <published>2025-01-19T05:05:40.952Z</published>
-    <updated>2025-01-19T05:18:27.637Z</updated>
+    <updated>2025-01-19T05:47:51.842Z</updated>
     
-    <content type="html"><![CDATA[<p>2025年我打算做一些小的转型.<br>首先, 网站文字会以中文为主. 然后我还加入了购物功能, 准备和 PayPal 按钮配合出售作品.<br>其次, 我又换引擎了. 从 cocos 换到 Defold 是因为 cocos 在稳定性方面存在不少问题, 难以依赖.<br>换掉 Defold 绝对不是因为 Defold 不好, Defold 在我印象里是又小巧, 又精密, 又灵活, 又完整的游戏引擎.<br>这次从 Defold 换成 OpenFL 纯粹是因为<strong>怀旧</strong>.</p><p>人, 岁数一大就爱怀旧, 看到 OpenFL 的代码时我的思绪瞬间被拉回到当初用 AS3 写 Flash 的日子.<br><strong>Haxe + Lime + OpenFL + Starling</strong><br>多么像 Flash 啊! 虽然 Flash 早已成为过去式. 但是 OpenFL 和 Lime 开辟了一个新的天地, 一个经典, 又新潮的天地.</p><p>不知我能用 OpenFL 写出什么样的作品呢? 我们一起加油吧!</p>]]></content>
+    <content type="html"><![CDATA[<p>2025年我打算做一些小的转型.<br>首先, 网站文字会以中文为主. 然后我还加入了购物功能, 准备和 PayPal 按钮配合出售作品.<br>其次, 我又换引擎了. 从 cocos 换到 Defold 是因为 cocos 在稳定性方面存在不少问题, 难以依赖.<br>换掉 Defold 绝对不是因为 Defold 不好, Defold 在我印象里是又小巧, 又精密, 又灵活, 又完整的游戏引擎.<br>这次从 Defold 换成 OpenFL 纯粹是因为<strong>怀旧</strong>.</p><p>人, 岁数一大就爱怀旧, 看到 OpenFL 的代码时我的思绪瞬间被拉回到当初用 AS3 写 Flash 的日子.<br><strong>Haxe + Lime + OpenFL + Starling</strong><br>多么像 Flash 啊! 虽然 Flash 早已成为过去式. 但是 OpenFL 和 Lime 开辟了一个新的天地, 一个经典, 又新潮的天地.</p><p>不知我能用 OpenFL 写出什么样的作品呢? 我们一起加油吧!</p><p><img src="/assets/openfl/4399.jpg" alt="4399" title="奖励"></p>]]></content>
     
     
       
@@ -394,29 +417,6 @@
     
     
     <summary type="html">I want to explain the misunderstanding about Chinese TaiChi☯.</summary>
-    
-    
-    
-    
-    <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coco&#39;s Games on line</title>
-    <link href="https://cocosgames.com/2020/12/26/online/"/>
-    <id>https://cocosgames.com/2020/12/26/online/</id>
-    <published>2020-12-26T07:06:28.804Z</published>
-    <updated>2021-08-19T10:52:52.600Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hi, my name is Coco. Welcome to my personal site. this is my first post. I’d like to share my opinion about what is a game.</p><blockquote><p>  <strong>A game is to tell, a game is to get.</strong><br>  <strong>A game is to think, a game is to learn.</strong><br>  <strong>A game is to encourage, a game is to try.</strong><br>  <strong>A game is to laugh, a game is to cry.</strong></p><hr><p>  <strong>So that, a game is to bring us a better life.</strong></p></blockquote><p>Thank you so much for reading it.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Hi, my name is Coco. Welcome to my personal site. this is my first post. I’d like to share my opinion about what is a game.&lt;/p&gt;
-&lt;blockquo</summary>
-      
     
     
     
