@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-19T05:50:55.846Z</updated>
+  <updated>2025-01-19T07:44:55.754Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cocosgames.com/2025/01/19/catchit/"/>
     <id>https://cocosgames.com/2025/01/19/catchit/</id>
     <published>2025-01-19T05:49:00.688Z</published>
-    <updated>2025-01-19T05:50:55.846Z</updated>
+    <updated>2025-01-19T07:44:55.754Z</updated>
     
     <content type="html"><![CDATA[<p>已经商用.<br><img src="/assets/catchit/4942dae9fbcd90ec6866c8ee6c83953b0f0dea48.gif" alt="image"></p>]]></content>
     
@@ -35,7 +35,7 @@
     
     
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    <category term="demo" scheme="https://cocosgames.com/tags/demo/"/>
     
   </entry>
   
@@ -66,7 +66,7 @@
     <link href="https://cocosgames.com/2025/01/19/sudoku/"/>
     <id>https://cocosgames.com/2025/01/19/sudoku/</id>
     <published>2025-01-19T04:37:25.157Z</published>
-    <updated>2025-01-19T05:04:12.395Z</updated>
+    <updated>2025-01-19T07:44:55.782Z</updated>
     
     <content type="html"><![CDATA[<p>数独是我使用 cocos creator 2 创作的小游戏.<br><img src="/assets/sudoku/4f0f917ddc0d314e069125d916b1b7cd27a6a452_2_690x386.png" alt="image"></p><a id="more"></a><p>游戏特性有:</p><ul><li><p>易/中/难/巨难 四种难度选择</p></li><li><p>实时自动生成题面，也可以保存题面以供加载</p></li><li><p>屏幕适配</p></li><li><p>解题系统 （1，改正玩家错误数据；2，如果需要自动显示候选数；3，给出解题过程）</p></li><li><p>屏幕旋转方向适配</p></li></ul><p><img src="/assets/sudoku/29fb327842f9609226940afab27fe98718c88f8b_2_281x500.gif" alt="image"></p><p><img src="/assets/sudoku/d66a8cf9a6b48c2e6842b5cda15e16a9e5abba2f.gif" alt="image"></p><p>核心代码基于 <a href="https://github.com/pocketjoso/sudokuJS/blob/master/sudokuJS.js">https://github.com/pocketjoso/sudokuJS/blob/master/sudokuJS.js</a> （MIT协议）<br>我做了一点小修改以便它适应cocos creator.</p><p>游戏最终因为显示效率低下而放弃, 现在 cocos 官方推出了 cocos creator 3, 不知显示效率是否提升了呢?</p><p>开源地址:<br><a href="https://github.com/CocosGames/NewSudoku_beta">https://github.com/CocosGames/NewSudoku_beta</a></p>]]></content>
     
@@ -76,7 +76,7 @@
     
     
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    <category term="demo" scheme="https://cocosgames.com/tags/demo/"/>
     
   </entry>
   
@@ -85,7 +85,7 @@
     <link href="https://cocosgames.com/2025/01/19/ServerPhysics/"/>
     <id>https://cocosgames.com/2025/01/19/ServerPhysics/</id>
     <published>2025-01-19T02:56:35.267Z</published>
-    <updated>2025-01-19T03:26:33.150Z</updated>
+    <updated>2025-01-19T07:44:55.773Z</updated>
     
     <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.</p><iframe width="100%" height="500" src="https://www.youtube.com/embed/XIH-vnY6_4M" title="Server Physics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>主要的问题就是让物理引擎在服务器端运行, 客户端负责同步绘制.<br>后台用Colyseus, 前台用Defold, 挺简单的, 大家看看吧.</p><p>开源地址:<br><a href="https://github.com/CocosGames/ServerPhysics">https://github.com/CocosGames/ServerPhysics</a></p>]]></content>
     
@@ -97,7 +97,7 @@
     
     
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    <category term="demo" scheme="https://cocosgames.com/tags/demo/"/>
     
   </entry>
   
@@ -106,7 +106,7 @@
     <link href="https://cocosgames.com/2025/01/19/palamedes/"/>
     <id>https://cocosgames.com/2025/01/19/palamedes/</id>
     <published>2025-01-19T02:32:53.609Z</published>
-    <updated>2025-01-19T02:54:05.094Z</updated>
+    <updated>2025-01-19T07:44:55.788Z</updated>
     
     <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的多人在綫打砖块游戲.</p><iframe width="1280" height="540" src="https://www.youtube.com/embed/QwrIExVUwdI" title="Palamedes#4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>大家好, 我是 COCO.<br>我非常喜欢 <a href="https://defold.com/">Defold</a> 和 <a href="https://colyseus.io/">Colyseus</a>, 很想用这两种技术制作游戏.<br>以前做的都是 DEMO, 这次终于下决心从头到尾做一款真正的游戏了.<br>我小时候很喜欢玩 Palamedes 这款 Puzzle 类游戏. 可以和 AI 对战, 也可以双人对战.<br>使用 Defold 和 Colyseus, 我决心把它做成互联网对战游戏.</p><p>首先, 游戏的主要玩法是骰子射击. 从网上找到了一些免费的骰子图片:<br><img src="/assets/palamedes/88674afdca9dea715627d010c30fd7766de95666.png" alt="image|641x125"><br>稍加修改做成游戏需要的样子:<br><img src="/assets/palamedes/d2480fd47ec8b4e0129e433c55d305eb29ced324.png" alt="image|629x93"><br>六帧的爆炸动画, 逐帧动画 once forward:<br><img src="/assets/palamedes/a996ee781a7dca439f172079cba7b5fa89583bb8_2_690x171.png" alt="image|690x171"><br>话说 Defold 如果能支持 TexturePacker 的格式就好了.</p><ul><li>Github 与 lfs 存储<br>使用 Git 与 Github 来进行版本控制与数据备份大家都知道, 这里就不多说了.<br>有一点值得注意的是对于二进制大文件, 比如 psd 文件, 我的习惯是把他们放在一个特殊目录里, 然后使用 Git LFS 进行追踪, 这样不但减少了存储空间的消耗, 还能在线查看 psd 等文件的内容, 甚至对比更新前后的不同, 一举两得, 非常方便.</li></ul><p><img src="/assets/palamedes/173ca728e1b7cb1f25f1f9fbd39dfc36df43b185.png" alt="image|690x402"></p><ul><li><p>服务器权威与客户端无效操作<br>该游戏设计成为一对一在线对战游戏, 那么就要考虑服务器的权威性. 即游戏重要的状态数据和操作都要由服务器造成并进行数据下发. 比如玩家位置，玩家骰子变换点数，等等. 但是有一些操作，比如下图中用二点骰子射击三点目标:<br><img src="/assets/palamedes/3e8573f3bc0f26d9bbb0141c0833c35f2e341a74_2_457x500.png" alt="image|457x500"></p><p>这类操作在游戏中是无效的，那么就不应该把这种无效射击操作发送到服务器，服务器只要进行有效的射击的验证工作就好了. 这样做不但能减少服务器的计算压力，同时也能节省下宝贵的带宽.</p></li></ul><ul><li><p>花样<br>游戏中保留最近消掉的6个骰子点数, 这些点数可以构成各种花样, 每种花样根据构成的难易程度给与玩家奖励. 比如点数序列 “1,2,3,4,5,6” 可与让游戏帮你消掉四行骰子.<br><img src="/assets/palamedes/169dac7e08e9b3f9ad0a9989e1d23feb267450be.png" alt="image|469x137"></p></li><li><p>操作<br>游戏的输入操作非常简单: 上下左右加一个切换骰子的功能. 为了同时满足键盘输入与手机上的手势输入, 游戏中使用了 <a href="https://defold.com/assets/defoldinput">Defold Input</a> 这一扩展程序. 注意程序中要避免 on_input 函数和 on_message 函数的冲突.</p></li><li><p>UI<br>Defold 引擎核心很小, 所以就连GUI中按钮点击监测这样的功能都没有提供. 好在官方和社区为 Defold 提供了许许多多的原生扩展和插件, 以满足各种需求. 逛一逛 Defold 免费的 <a href="https://defold.com/assets">资源大厅</a> 吧, 为自己游戏添加想要的功能, 就像逛超市一样.<br>本游戏里使用了基本的两个插件: <a href="https://defold.com/assets/gooey">gooey</a> 和 <a href="https://defold.com/assets/monarch">monarch</a>.<br>gooey 负责监听GUI中按钮的点击操作, monarch 负责场景的切换.<br>建议经常逛逛Defold社区和资源大厅以及Github, 你会发现大家给Defold创造了许许多多让人眼前一亮的扩展功能.</p></li></ul><p>在线试玩: (服务器已下线)<br><del><a href="https://cocosgames.itch.io/palamedes">https://cocosgames.itch.io/palamedes</a></del></p><p>开源地址:<br><a href="https://github.com/CocosGames/Palamedes">https://github.com/CocosGames/Palamedes</a></p>]]></content>
     
@@ -118,7 +118,7 @@
     
     
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    <category term="demo" scheme="https://cocosgames.com/tags/demo/"/>
     
   </entry>
   
@@ -296,7 +296,7 @@
     <link href="https://cocosgames.com/2021/12/27/wuzimu/"/>
     <id>https://cocosgames.com/2021/12/27/wuzimu/</id>
     <published>2021-12-27T08:45:40.697Z</published>
-    <updated>2025-01-19T02:44:52.049Z</updated>
+    <updated>2025-01-19T07:44:55.778Z</updated>
     
     <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?<br><img src="/assets/wuzimu/wuzimu.png" alt="wuzimu.png"><br>(基於包體原因 Github 上的項目中去掉了背景)</p><a id="more"></a><ul><li>客戶端<br>客戶端使用 Defold 引擎編寫, 這是一個高性能又跨平臺的 2D 游戲引擎.<br>Defold 使用的是 Lua 語言, 所以數組的索引是從 1 開始的, 這個需要注意一下.</li></ul><ul><li><p>服務端<br>我們的 <a href="https://docs.colyseus.io/">Colyseus 服務器</a>閃亮登場!<br>還不瞭解  Colyseus 的小夥伴們請參考<a href="https://docs.colyseus.io/colyseus/">這裏</a>.<br>看看一發 npm 脚本命令建立一個完整的服務器.<br><img src="/assets/wuzimu/colyseus.png" alt="colyseus.png"><br>如果看到控制臺輸出了這句話, 那麽恭喜, 你的服務器建立成功!</p></li><li><p><a href="https://console.colyseus.io/">Colyseus Arena</a><br>將服務器程序編譯並上傳至 <a href="https://console.colyseus.io/">Colyseus Arena 服务</a>. Arena 服務是基於使用量計費的自動擴展的 Colyseus 云, 提供免費試用, 詳情參考<a href="https://docs.colyseus.io/arena/">這裏</a>.<br><img src="/assets/wuzimu/arena.png" alt="arena.png"><br>上傳完代碼記得點擊 Deploy 按鈕, 否則不會生效哦!</p></li><li><p>開源參考<br><a href="https://github.com/CocosGames/WuZiMu">https://github.com/CocosGames/WuZiMu</a></p></li><li><p>在线试玩 (服务器已下线)<br><del><a href="https://cocosgames.github.io/WuZiMu/">https://cocosgames.github.io/WuZiMu/</a></del><br><del><a href="https://cocosgames.com/assets/host/WuZiMu/">https://cocosgames.com/assets/host/WuZiMu/</a></del></p></li></ul>]]></content>
     
@@ -307,7 +307,7 @@
     
     
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    <category term="demo" scheme="https://cocosgames.com/tags/demo/"/>
     
   </entry>
   
