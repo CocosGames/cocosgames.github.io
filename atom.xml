@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-19T03:00:40.782Z</updated>
+  <updated>2025-01-19T03:26:33.150Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://cocosgames.com/2025/01/19/ServerPhysics/"/>
     <id>https://cocosgames.com/2025/01/19/ServerPhysics/</id>
     <published>2025-01-19T02:56:35.267Z</published>
-    <updated>2025-01-19T03:00:40.782Z</updated>
+    <updated>2025-01-19T03:26:33.150Z</updated>
     
-    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.</p><iframe width="1280" height="514" src="https://www.youtube.com/embed/XIH-vnY6_4M" title="Server Physics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>主要的问题就是让物理引擎在服务器端运行, 客户端负责同步绘制.<br>后台用Colyseus, 前台用Defold, 挺简单的, 大家看看吧.</p><p>开源地址:<br><a href="https://github.com/CocosGames/Palamedes">https://github.com/CocosGames/Palamedes</a></p>]]></content>
+    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.</p><iframe width="100%" height="500" src="https://www.youtube.com/embed/XIH-vnY6_4M" title="Server Physics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>主要的问题就是让物理引擎在服务器端运行, 客户端负责同步绘制.<br>后台用Colyseus, 前台用Defold, 挺简单的, 大家看看吧.</p><p>开源地址:<br><a href="https://github.com/CocosGames/ServerPhysics">https://github.com/CocosGames/ServerPhysics</a></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;哈嘍大家好!&lt;/p&gt;
 &lt;p&gt;因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.&lt;/p&gt;
-&lt;iframe width=&quot;1280&quot; height=&quot;514&quot; src=&quot;https://www.youtube.com/embed/XIH-vnY6_4M&quot; title=&quot;Server Physics&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</summary>
+&lt;iframe width=&quot;100%&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/XIH-vnY6_4M&quot; title=&quot;Server Physics&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</summary>
     
     
     
