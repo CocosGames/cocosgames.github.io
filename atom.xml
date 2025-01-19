@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-01T05:47:37.983Z</updated>
+  <updated>2025-01-19T03:00:40.782Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Server Physics</title>
+    <link href="https://cocosgames.com/2025/01/19/ServerPhysics/"/>
+    <id>https://cocosgames.com/2025/01/19/ServerPhysics/</id>
+    <published>2025-01-19T02:56:35.267Z</published>
+    <updated>2025-01-19T03:00:40.782Z</updated>
+    
+    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.</p><iframe width="1280" height="514" src="https://www.youtube.com/embed/XIH-vnY6_4M" title="Server Physics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>主要的问题就是让物理引擎在服务器端运行, 客户端负责同步绘制.<br>后台用Colyseus, 前台用Defold, 挺简单的, 大家看看吧.</p><p>开源地址:<br><a href="https://github.com/CocosGames/Palamedes">https://github.com/CocosGames/Palamedes</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;哈嘍大家好!&lt;/p&gt;
+&lt;p&gt;因为群里有人问到物理服务器怎么做, 我就做了一个小例子给大家看看.&lt;/p&gt;
+&lt;iframe width=&quot;1280&quot; height=&quot;514&quot; src=&quot;https://www.youtube.com/embed/XIH-vnY6_4M&quot; title=&quot;Server Physics&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</summary>
+    
+    
+    
+    
+    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Palamedes</title>
+    <link href="https://cocosgames.com/2025/01/19/palamedes/"/>
+    <id>https://cocosgames.com/2025/01/19/palamedes/</id>
+    <published>2025-01-19T02:32:53.609Z</published>
+    <updated>2025-01-19T02:54:05.094Z</updated>
+    
+    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的多人在綫打砖块游戲.</p><iframe width="1280" height="540" src="https://www.youtube.com/embed/QwrIExVUwdI" title="Palamedes#4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a id="more"></a><p>大家好, 我是 COCO.<br>我非常喜欢 <a href="https://defold.com/">Defold</a> 和 <a href="https://colyseus.io/">Colyseus</a>, 很想用这两种技术制作游戏.<br>以前做的都是 DEMO, 这次终于下决心从头到尾做一款真正的游戏了.<br>我小时候很喜欢玩 Palamedes 这款 Puzzle 类游戏. 可以和 AI 对战, 也可以双人对战.<br>使用 Defold 和 Colyseus, 我决心把它做成互联网对战游戏.</p><p>首先, 游戏的主要玩法是骰子射击. 从网上找到了一些免费的骰子图片:<br><img src="/assets/palamedes/88674afdca9dea715627d010c30fd7766de95666.png" alt="image|641x125"><br>稍加修改做成游戏需要的样子:<br><img src="/assets/palamedes/d2480fd47ec8b4e0129e433c55d305eb29ced324.png" alt="image|629x93"><br>六帧的爆炸动画, 逐帧动画 once forward:<br><img src="/assets/palamedes/a996ee781a7dca439f172079cba7b5fa89583bb8_2_690x171.png" alt="image|690x171"><br>话说 Defold 如果能支持 TexturePacker 的格式就好了.</p><ul><li>Github 与 lfs 存储<br>使用 Git 与 Github 来进行版本控制与数据备份大家都知道, 这里就不多说了.<br>有一点值得注意的是对于二进制大文件, 比如 psd 文件, 我的习惯是把他们放在一个特殊目录里, 然后使用 Git LFS 进行追踪, 这样不但减少了存储空间的消耗, 还能在线查看 psd 等文件的内容, 甚至对比更新前后的不同, 一举两得, 非常方便.</li></ul><p><img src="/assets/palamedes/173ca728e1b7cb1f25f1f9fbd39dfc36df43b185.png" alt="image|690x402"></p><ul><li><p>服务器权威与客户端无效操作<br>该游戏设计成为一对一在线对战游戏, 那么就要考虑服务器的权威性. 即游戏重要的状态数据和操作都要由服务器造成并进行数据下发. 比如玩家位置，玩家骰子变换点数，等等. 但是有一些操作，比如下图中用二点骰子射击三点目标:<br><img src="/assets/palamedes/3e8573f3bc0f26d9bbb0141c0833c35f2e341a74_2_457x500.png" alt="image|457x500"></p><p>这类操作在游戏中是无效的，那么就不应该把这种无效射击操作发送到服务器，服务器只要进行有效的射击的验证工作就好了. 这样做不但能减少服务器的计算压力，同时也能节省下宝贵的带宽.</p></li></ul><ul><li><p>花样<br>游戏中保留最近消掉的6个骰子点数, 这些点数可以构成各种花样, 每种花样根据构成的难易程度给与玩家奖励. 比如点数序列 “1,2,3,4,5,6” 可与让游戏帮你消掉四行骰子.<br><img src="/assets/palamedes/169dac7e08e9b3f9ad0a9989e1d23feb267450be.png" alt="image|469x137"></p></li><li><p>操作<br>游戏的输入操作非常简单: 上下左右加一个切换骰子的功能. 为了同时满足键盘输入与手机上的手势输入, 游戏中使用了 <a href="https://defold.com/assets/defoldinput">Defold Input</a> 这一扩展程序. 注意程序中要避免 on_input 函数和 on_message 函数的冲突.</p></li><li><p>UI<br>Defold 引擎核心很小, 所以就连GUI中按钮点击监测这样的功能都没有提供. 好在官方和社区为 Defold 提供了许许多多的原生扩展和插件, 以满足各种需求. 逛一逛 Defold 免费的 <a href="https://defold.com/assets">资源大厅</a> 吧, 为自己游戏添加想要的功能, 就像逛超市一样.<br>本游戏里使用了基本的两个插件: <a href="https://defold.com/assets/gooey">gooey</a> 和 <a href="https://defold.com/assets/monarch">monarch</a>.<br>gooey 负责监听GUI中按钮的点击操作, monarch 负责场景的切换.<br>建议经常逛逛Defold社区和资源大厅以及Github, 你会发现大家给Defold创造了许许多多让人眼前一亮的扩展功能.</p></li></ul><p>在线试玩: (服务器已下线)<br><del><a href="https://cocosgames.itch.io/palamedes">https://cocosgames.itch.io/palamedes</a></del></p><p>开源地址:<br><a href="https://github.com/CocosGames/Palamedes">https://github.com/CocosGames/Palamedes</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;哈嘍大家好!&lt;/p&gt;
+&lt;p&gt;這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的多人在綫打砖块游戲.&lt;/p&gt;
+&lt;iframe width=&quot;1280&quot; height=&quot;540&quot; src=&quot;https://www.youtube.com/embed/QwrIExVUwdI&quot; title=&quot;Palamedes#4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</summary>
+    
+    
+    
+    
+    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    
+  </entry>
   
   <entry>
     <title>HAPPY NEW YEAR 2025!</title>
@@ -60,7 +102,7 @@
     <link href="https://cocosgames.com/2024/09/21/colyseus_cloud/"/>
     <id>https://cocosgames.com/2024/09/21/colyseus_cloud/</id>
     <published>2024-09-21T09:36:20.837Z</published>
-    <updated>2024-09-21T09:39:26.806Z</updated>
+    <updated>2025-01-19T02:20:21.222Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://cloud-prod.colyseus.io/">https://cloud-prod.colyseus.io/</a></p>]]></content>
     
@@ -75,8 +117,6 @@
     
     
     <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
-    
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
     
   </entry>
   
@@ -126,7 +166,7 @@
     <link href="https://cocosgames.com/2023/03/22/Defold_Steps/"/>
     <id>https://cocosgames.com/2023/03/22/Defold_Steps/</id>
     <published>2023-03-22T11:17:16.457Z</published>
-    <updated>2023-03-22T11:21:44.294Z</updated>
+    <updated>2025-01-19T02:20:21.216Z</updated>
     
     <content type="html"><![CDATA[<ol><li>打开 Defold 新建项目</li><li>打开 VSCode 初始化项目</li><li>控制台 git lfs track raw/**</li><li>加入扩展插件</li><li>加入素材, 创建 collection</li><li>加入逻辑与控制代码并调试</li><li>github commit/push</li><li>重复 4~7</li><li>分辨率适配</li><li>成品发布</li></ol>]]></content>
     
@@ -146,8 +186,6 @@
     
     
     <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
-    
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
     
   </entry>
   
@@ -175,7 +213,7 @@
     <link href="https://cocosgames.com/2023/03/13/Defold/"/>
     <id>https://cocosgames.com/2023/03/13/Defold/</id>
     <published>2023-03-13T11:43:46.072Z</published>
-    <updated>2023-03-13T12:04:50.373Z</updated>
+    <updated>2025-01-19T02:20:21.233Z</updated>
     
     <content type="html"><![CDATA[<p>由于 Cocos Creator 的稳定性实在欠佳, 无奈之下更换游戏引擎, <a href="https://defold.com/">Defold</a> 是不二之选.</p><a id="more"></a><p><img src="https://forum.defold.com/uploads/default/original/3X/3/9/397d7884aa8851a1697ec548fb01325643938a16.png" alt="Defold"></p><p>下面是 Defold 作者称赞自己的引擎有三点好处:</p><ul><li>Focus on small size - A web export is less than 1MB gzipped. Other platforms between 2 and 3 MB.</li><li>Zero-setup policy - As a developer you only install Defold once. No additional tools are needed to create bundles for each supported platform. No Android Studio, no XCode. </li><li>Truly cross platform - Write once run everywhere is true for Defold. We focus on platform agnostic APIs where it is possible to create application bundles for all supported platforms without any changes to the code.</li></ul><p>翻译过来就是 <strong>核心超级小</strong>, <strong>集成编辑器</strong> 和 <strong>真正跨平台</strong>. 真的很吸引人啊! 但是我最看重的还是其<a href="https://twitter.com/defold/status/1622896629056524292">稳定性</a>.</p><p>The Defold Foundation can not assist with funding or publishing but we’re happy to promote new games on Twitter and other social channels, and in newsletters and on the website.</p><p>When it comes to monetization in general Defold has support for In-app purchases and subscriptions as well as many of the most popular ad networks. Defold is also compliant with most of the latest SDKs and keeps up-to-date with OS updates. This helps in getting featured by for instance Apple or Google.</p><p>Defold 目前不做游戏发行, 但是毋庸置疑的是开发者能用 Defold 实现作品变现 (<a href="https://defold.com/tags/stars/monetization/">https://defold.com/tags/stars/monetization/</a>).</p><p>虽然目前 Defold 主要作为 2D 游戏引擎, 但是官方正在协同社区力量探讨 3D 的可能性.</p><p>在下不才, 试着翻译了 Defold 的 <a href="https://defold.com/zh/manuals/introduction/">全部文档</a>, 还是官方论坛 <a href="https://forum.defold.com/c/chinese/492">中文分区</a> 版主.</p><p>欢迎加入 Defold!</p>]]></content>
     
@@ -187,8 +225,6 @@
     
     <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
-    
   </entry>
   
   <entry>
@@ -196,18 +232,16 @@
     <link href="https://cocosgames.com/2021/12/27/wuzimu/"/>
     <id>https://cocosgames.com/2021/12/27/wuzimu/</id>
     <published>2021-12-27T08:45:40.697Z</published>
-    <updated>2023-03-13T11:49:36.177Z</updated>
+    <updated>2025-01-19T02:44:52.049Z</updated>
     
-    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?</p><a id="more"></a><p><img src="/assets/wuzimu/wuzimu.png" alt="wuzimu.png"><br>(基於包體原因 Github 上的項目中去掉了背景)</p><ul><li>客戶端<br>客戶端使用 Defold 引擎編寫, 這是一個高性能又跨平臺的 2D 游戲引擎.<br>Defold 使用的是 Lua 語言, 所以數組的索引是從 1 開始的, 這個需要注意一下.</li></ul><ul><li><p>服務端<br>我們的 <a href="https://docs.colyseus.io/">Colyseus 服務器</a>閃亮登場!<br>還不瞭解  Colyseus 的小夥伴們請參考<a href="https://docs.colyseus.io/colyseus/">這裏</a>.<br>看看一發 npm 脚本命令建立一個完整的服務器.<br><img src="/assets/wuzimu/colyseus.png" alt="colyseus.png"><br>如果看到控制臺輸出了這句話, 那麽恭喜, 你的服務器建立成功!</p></li><li><p><a href="https://console.colyseus.io/">Colyseus Arena</a><br>將服務器程序編譯並上傳至 <a href="https://console.colyseus.io/">Colyseus Arena 服务</a>. Arena 服務是基於使用量計費的自動擴展的 Colyseus 云, 提供免費試用, 詳情參考<a href="https://docs.colyseus.io/arena/">這裏</a>.<br><img src="/assets/wuzimu/arena.png" alt="arena.png"><br>上傳完代碼記得點擊 Deploy 按鈕, 否則不會生效哦!</p></li><li><p>開源參考<br><a href="https://github.com/CocosGames/WuZiMu">https://github.com/CocosGames/WuZiMu</a></p></li><li><p>在线试玩 (服务器已下线)<br><del><a href="https://cocosgames.github.io/WuZiMu/">https://cocosgames.github.io/WuZiMu/</a></del><br><del><a href="https://cocosgames.com/assets/host/WuZiMu/">https://cocosgames.com/assets/host/WuZiMu/</a></del></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>哈嘍大家好!</p><p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?<br><img src="/assets/wuzimu/wuzimu.png" alt="wuzimu.png"><br>(基於包體原因 Github 上的項目中去掉了背景)</p><a id="more"></a><ul><li>客戶端<br>客戶端使用 Defold 引擎編寫, 這是一個高性能又跨平臺的 2D 游戲引擎.<br>Defold 使用的是 Lua 語言, 所以數組的索引是從 1 開始的, 這個需要注意一下.</li></ul><ul><li><p>服務端<br>我們的 <a href="https://docs.colyseus.io/">Colyseus 服務器</a>閃亮登場!<br>還不瞭解  Colyseus 的小夥伴們請參考<a href="https://docs.colyseus.io/colyseus/">這裏</a>.<br>看看一發 npm 脚本命令建立一個完整的服務器.<br><img src="/assets/wuzimu/colyseus.png" alt="colyseus.png"><br>如果看到控制臺輸出了這句話, 那麽恭喜, 你的服務器建立成功!</p></li><li><p><a href="https://console.colyseus.io/">Colyseus Arena</a><br>將服務器程序編譯並上傳至 <a href="https://console.colyseus.io/">Colyseus Arena 服务</a>. Arena 服務是基於使用量計費的自動擴展的 Colyseus 云, 提供免費試用, 詳情參考<a href="https://docs.colyseus.io/arena/">這裏</a>.<br><img src="/assets/wuzimu/arena.png" alt="arena.png"><br>上傳完代碼記得點擊 Deploy 按鈕, 否則不會生效哦!</p></li><li><p>開源參考<br><a href="https://github.com/CocosGames/WuZiMu">https://github.com/CocosGames/WuZiMu</a></p></li><li><p>在线试玩 (服务器已下线)<br><del><a href="https://cocosgames.github.io/WuZiMu/">https://cocosgames.github.io/WuZiMu/</a></del><br><del><a href="https://cocosgames.com/assets/host/WuZiMu/">https://cocosgames.com/assets/host/WuZiMu/</a></del></p></li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;哈嘍大家好!&lt;/p&gt;
-&lt;p&gt;這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?&lt;/p&gt;</summary>
+&lt;p&gt;這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?&lt;br&gt;&lt;img src=&quot;/assets/wuzimu/wuzimu.png&quot; alt=&quot;wuzimu.png&quot;&gt;&lt;br&gt;(基於包體原因 Github 上的項目中去掉了背景)&lt;/p&gt;</summary>
     
     
     
-    
-    <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
     
     <category term="game" scheme="https://cocosgames.com/tags/game/"/>
     
@@ -218,9 +252,9 @@
     <link href="https://cocosgames.com/2021/08/19/Cocos%20Creator%203%20+%20Colyseus/"/>
     <id>https://cocosgames.com/2021/08/19/Cocos%20Creator%203%20+%20Colyseus/</id>
     <published>2021-08-19T10:50:48.583Z</published>
-    <updated>2023-03-13T11:16:07.942Z</updated>
+    <updated>2025-01-19T02:26:11.545Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://cocos.com/creator">Cocos Creator</a> 是跨平台 2D/3D 游戏开发工具.</p><a id="more"></a><p>Colyseus SDK 在 Cocos Creator 的运用上与 <a href="https://docs.colyseus.io/getting-started/javascript-client/">JavaScript SDK</a> 类似. 主要区别在于如何通过 Cocos Creator 的 <a href="https://docs.colyseus.io/colyseus/getting-started/cocos-creator/#importing-from-the-extension">TypeScript 组件来引入服务</a>.</p><blockquote><p>想要具体实例?<br>看看 <a href="https://github.com/colyseus/cocos-demo-tictactoe">Tic Tac Toe 项目</a>.</p></blockquote><h4 id="1-安装扩展插件"><a href="#1-安装扩展插件" class="headerlink" title="1. 安装扩展插件"></a>1. 安装扩展插件</h4><ul><li>打开 <a href="https://store.cocos.com/app/en/detail/2937/">Cocos Store</a> (菜单: “扩展” » “商店”)</li><li>搜索 “Colyseus SDK”</li><li>下载扩展插件<h4 id="2-更新-tsconfig-json-文件"><a href="#2-更新-tsconfig-json-文件" class="headerlink" title="2. 更新 tsconfig.json 文件"></a>2. 更新 tsconfig.json 文件</h4></li></ul><p>确认 <code>&quot;compilerOptions&quot;</code> 类目下有 <code>&quot;esModuleInterop&quot;: true</code>:</p><pre><code>// .../* Add your custom configuration here. */&quot;compilerOptions&quot;: &#123;  // ...  &quot;esModuleInterop&quot;: true  // ...&#125;// ...</code></pre><h4 id="3-导入扩展插件"><a href="#3-导入扩展插件" class="headerlink" title="3. 导入扩展插件"></a>3. 导入扩展插件</h4><p>根据路径导入 Colyseus 扩展插件:</p><pre><code>import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;</code></pre><p>下面给出一个更详细的示例方便大家应用于自己的项目之中.</p><p>把如下内容命名为 <code>NetworkManager.ts</code> 存入项目的 <code>assets</code> 文件夹里.</p><pre><code>import &#123; _decorator, Component, Node &#125; from &#39;cc&#39;;const &#123; ccclass, property &#125; = _decorator;import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;@ccclass(&#39;NetworkManager&#39;)export class NetworkManager extends Component &#123;    @property hostname = &quot;localhost&quot;;    @property port = 2567;    @property useSSL = false;    client!: Colyseus.Client;    room!: Colyseus.Room;    start () &#123;        // 实例化 Colyseus 客户端        // 连接到 (ws|wss)://hostname[:port]        this.client = new Colyseus.Client(`$&#123;this.useSSL ? &quot;wss&quot; : &quot;ws&quot;&#125;://$&#123;this.hostname&#125;$&#123;([443, 80].includes(this.port) || this.useSSL) ? &quot;&quot; : `:$&#123;this.port&#125;`&#125;`);        // 连接到 room        this.connect();    &#125;    async connect() &#123;         try &#123;            this.room = await this.client.joinOrCreate(&quot;my_room&quot;);            console.log(&quot;joined successfully!&quot;);            console.log(&quot;user&#39;s sessionId:&quot;, this.room.sessionId);            this.room.onStateChange((state) =&gt; &#123;                console.log(&quot;onStateChange: &quot;, state);            &#125;);            this.room.onLeave((code) =&gt; &#123;                console.log(&quot;onLeave:&quot;, code);            &#125;);        &#125; catch (e) &#123;            console.error(e);        &#125;    &#125;&#125;</code></pre><p>然后就可以把 NetworkManager 作为组件安放在 Cocos Creator 的任意节点上.</p><p>因为上面用到了 @property 装饰词, 所以 hostname, port 和 useSSL 这些变量都可以在 Cocos Creator 中修改:</p><p><img src="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-component.png" alt="Colyseus SDK on TypeScript Component"></p><hr><h4 id="另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件"><a href="#另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件" class="headerlink" title="另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)"></a>另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)</h4><ul><li><p><a href="https://github.com/colyseus/colyseus.js/releases">从 GitHub 上下载最新版 <code>colyseus-js-client.zip</code></a>.</p></li><li><p>把 <code>colyseus-js-client.zip</code> 里的文件解压到 <code>assets/</code> 文件夹里.</p></li><li><p>把 <code>colyseus.js</code> 和 <code>colyseus.d.ts</code> 文件移动到 Cocos Creator 项目的 <code>scripts</code> 文件夹里.</p></li><li><p>在资源面板点击 <code>colyseus.js</code>, 开启 “Import As Plugin” (详见下文图片)</p></li><li><p><strong>TypeScript</strong>: 使用 <code>import Colyseus from &quot;./colyseus.js&quot;;</code> 引入</p></li><li><p><strong>JavaScript</strong>: 使用 <code>const Colyseus = require(&quot;./colyseus.js&quot;);</code> 引入</p></li></ul><p><img src="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-import-as-plugin.png" alt="Import as plugin"></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://cocos.com/creator">Cocos Creator</a> 是跨平台 2D/3D 游戏开发工具.</p><a id="more"></a><p>Colyseus SDK 在 Cocos Creator 的运用上与 <a href="https://docs.colyseus.io/getting-started/javascript-client/">JavaScript SDK</a> 类似. 主要区别在于如何通过 Cocos Creator 的 <a href="https://docs.colyseus.io/colyseus/getting-started/cocos-creator/#importing-from-the-extension">TypeScript 组件来引入服务</a>.</p><blockquote><p>想要具体实例?<br>看看 <a href="https://github.com/colyseus/cocos-demo-tictactoe">Tic Tac Toe 项目</a>.</p></blockquote><h4 id="1-安装扩展插件"><a href="#1-安装扩展插件" class="headerlink" title="1. 安装扩展插件"></a>1. 安装扩展插件</h4><ul><li>打开 <a href="https://store.cocos.com/app/en/detail/2937/">Cocos Store</a> (菜单: “扩展” » “商店”)</li><li>搜索 “Colyseus SDK”</li><li>下载扩展插件<h4 id="2-更新-tsconfig-json-文件"><a href="#2-更新-tsconfig-json-文件" class="headerlink" title="2. 更新 tsconfig.json 文件"></a>2. 更新 tsconfig.json 文件</h4></li></ul><p>确认 <code>&quot;compilerOptions&quot;</code> 类目下有 <code>&quot;esModuleInterop&quot;: true</code>:</p><pre><code>// .../* Add your custom configuration here. */&quot;compilerOptions&quot;: &#123;  // ...  &quot;esModuleInterop&quot;: true  // ...&#125;// ...</code></pre><h4 id="3-导入扩展插件"><a href="#3-导入扩展插件" class="headerlink" title="3. 导入扩展插件"></a>3. 导入扩展插件</h4><p>根据路径导入 Colyseus 扩展插件:</p><pre><code>import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;</code></pre><p>下面给出一个更详细的示例方便大家应用于自己的项目之中.</p><p>把如下内容命名为 <code>NetworkManager.ts</code> 存入项目的 <code>assets</code> 文件夹里.</p><pre><code>import &#123; _decorator, Component, Node &#125; from &#39;cc&#39;;const &#123; ccclass, property &#125; = _decorator;import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;@ccclass(&#39;NetworkManager&#39;)export class NetworkManager extends Component &#123;    @property hostname = &quot;localhost&quot;;    @property port = 2567;    @property useSSL = false;    client!: Colyseus.Client;    room!: Colyseus.Room;    start () &#123;        // 实例化 Colyseus 客户端        // 连接到 (ws|wss)://hostname[:port]        this.client = new Colyseus.Client(`$&#123;this.useSSL ? &quot;wss&quot; : &quot;ws&quot;&#125;://$&#123;this.hostname&#125;$&#123;([443, 80].includes(this.port) || this.useSSL) ? &quot;&quot; : `:$&#123;this.port&#125;`&#125;`);        // 连接到 room        this.connect();    &#125;    async connect() &#123;         try &#123;            this.room = await this.client.joinOrCreate(&quot;my_room&quot;);            console.log(&quot;joined successfully!&quot;);            console.log(&quot;user&#39;s sessionId:&quot;, this.room.sessionId);            this.room.onStateChange((state) =&gt; &#123;                console.log(&quot;onStateChange: &quot;, state);            &#125;);            this.room.onLeave((code) =&gt; &#123;                console.log(&quot;onLeave:&quot;, code);            &#125;);        &#125; catch (e) &#123;            console.error(e);        &#125;    &#125;&#125;</code></pre><p>然后就可以把 NetworkManager 作为组件安放在 Cocos Creator 的任意节点上.</p><p>因为上面用到了 @property 装饰词, 所以 hostname, port 和 useSSL 这些变量都可以在 Cocos Creator 中修改:</p><hr><h4 id="另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件"><a href="#另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件" class="headerlink" title="另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)"></a>另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)</h4><ul><li><p><a href="https://github.com/colyseus/colyseus.js/releases">从 GitHub 上下载最新版 <code>colyseus-js-client.zip</code></a>.</p></li><li><p>把 <code>colyseus-js-client.zip</code> 里的文件解压到 <code>assets/</code> 文件夹里.</p></li><li><p>把 <code>colyseus.js</code> 和 <code>colyseus.d.ts</code> 文件移动到 Cocos Creator 项目的 <code>scripts</code> 文件夹里.</p></li><li><p>在资源面板点击 <code>colyseus.js</code>, 开启 “Import As Plugin” (详见下文图片)</p></li><li><p><strong>TypeScript</strong>: 使用 <code>import Colyseus from &quot;./colyseus.js&quot;;</code> 引入</p></li><li><p><strong>JavaScript</strong>: 使用 <code>const Colyseus = require(&quot;./colyseus.js&quot;);</code> 引入</p></li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://cocos.com/creator&quot;&gt;Cocos Creator&lt;/a&gt; 是跨平台 2D/3D 游戏开发工具.&lt;/p&gt;</summary>
@@ -230,8 +264,6 @@
     
     <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
     
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
-    
   </entry>
   
   <entry>
@@ -239,9 +271,9 @@
     <link href="https://cocosgames.com/2021/08/19/Colyseus%20%E4%B8%BA%20Cocos%20Store%20%E5%B8%A6%E6%9D%A5%E5%BC%80%E6%BA%90%E5%90%8E%E7%AB%AF%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1/"/>
     <id>https://cocosgames.com/2021/08/19/Colyseus%20%E4%B8%BA%20Cocos%20Store%20%E5%B8%A6%E6%9D%A5%E5%BC%80%E6%BA%90%E5%90%8E%E7%AB%AF%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1/</id>
     <published>2021-08-19T10:49:26.208Z</published>
-    <updated>2023-03-13T11:16:07.958Z</updated>
+    <updated>2025-01-19T02:24:57.652Z</updated>
     
-    <content type="html"><![CDATA[<p>自从 Cocos Creator 3.0 之后, 我们更新了 <a href="http://store.cocos.com/app/en">Cocos Store</a>, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.<br>Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 <a href="https://www.colyseus.io/">Colyseus</a>.</p><a id="more"></a><p><img src="https://www.cocos.com/wp-content/uploads/2021/06/ColyseusLogo-1024x563.png" alt="Colyseus"></p><p>如果你缺乏后台开发经验或者在开发多人在线游戏时遇到麻烦, 那么开源服务器 Colyseus 及其技术团队将成为你的救星. Colyseus 是一款易用, 好用的多人在线游戏服务器, 这一点已被诸多 HTML5 和手机游戏证明.</p><p>现在它来到了 <a href="http://store.cocos.com/app/detail/2937">Cocos Store</a>, 我们通力合作确保其在 Cocos Creator 上完美运行, 并且筹划了未来的合作规划.</p><p>这里我们有请 Colyseus 的创作者 <strong>Endel Dreyer</strong>, 与 Lucid Sight 的首席技术官, Colyseus 的拥有者 <strong>Farzi Zubair</strong> 接受采访.</p><hr><p><strong>Cocos: 很高兴采访二位. 对于没听说过 Colyseus 的开发者, 你们会如何介绍自己?</strong></p><p>Colyseus 团队: 直截了当, 我们的目的是将多人在线服务大众化, 所以我们开发了 Colyseus, 一款基于 Node.js 的高级多人在线后台服务平台.</p><p>我们的初心是简化多人在线游戏的实现, 以便开发者更专注于自己的游戏体验而不必承受后台开发的种种困难. 而且, Colyseus 提供服务端与客户端全套的解决方案就是为了方便开发者使用.</p><p><strong>C: 为什么基于 Node.js?</strong></p><p>CT: Node.js 通过各种方式致力于打造完美开发体验的生态系统. 其 JIT 编译器能提供比某些 C 语言程序高出许多倍的性能. Node.js 程序运行比 Java 需要的内存更少. 而且 Colyseus 得益于 Node.js 提供的各种模块. 各种问题都可以通过搜索 (和制作) 模块找到解决方法, 比如寻路, 导航, 连接数据库等等.</p><p><strong>C: 听起来很有吸引力. 那么 Colyseus 作为一款联网工具相对于开发者已有的网络工具有什么优势呢?</strong></p><p>CT: 市面上有许多多人在线服务框架. 但是以我们的经验, 我们能提供开发者需求的绝大多数功能. 作为独立开发者, 通常无力负担大额的游戏服务软件费用, 无法直接做到服务器扩张, 或者服务器代码难以修改以适应自己的游戏.</p><p>我们的软件是开源的, 这就为开发者提供了免费的服务器程序及其修改权 (MIT协议). 这也使得 <strong>Colyseus</strong> 能运行于各种容器, 并且缩放自如 (无论是自建还是订阅 <strong>Colyseus Arena</strong> 服务都能实现快速缩放), 高级 API 使得服务器与客户端沟通更加流畅.</p><p><strong>C: 我看到你们为很多游戏引擎开发了客户端, 但是作为西方最大支持者之一, 为什么看中 Cocos Creator 和 Cocos2d-x 了呢?</strong></p><p>CT: Cocos 产品名声在外. Cocos 社区也招人爱. 我们想为其游戏开发者提供最好的多人在线解决方案. 另外, 我们是开源社区的大fan, 专门支持像 Cocos 这样的开源项目.</p><p><strong>C: 我们注意到你们的产品是用 TypeScript 写的, 就像 Cocos Creator 一样. 为什么做出使用 TS 这个决定, 这对于 Cocos Creator 意味着什么?</strong></p><p>CT: TypeScript 意味着更好的可维护性. 对于程序员来说比 JavaScript 更好. JavaScript 程序员总是犯下拼写错误这类能直接导致服务器崩溃的失误. 但是一旦使用 TypeScript, 编译器就会阻止这种事情发生. Colyseus SDK 包含全部类型定义 - 你甚至可以从 Cocos Creator 里直接获取服务端状态变量.</p><p><strong>C: 让项目接入 Colyseus 服务有多容易?</strong></p><p>CT: 首先打开商店页面找到 Colyseus 插件. 下载安装.之后就可以在你的 Typescript 组件里使用了. 实现把客户端连接到一个 (或多个) 房间, 房间里的客户端互相传递信息, 监听服务器状态变化这样各种的功能.</p><p><img src="https://www.cocos.com/wp-content/uploads/2021/06/Endel-Dreyer-1024x1024.jpg" alt="Endel Dreyer"></p><p><strong>Endel Dreyer</strong></p><p><strong>C: 换个话题. 我们观察到多人在线游戏从以前的不到十人到如今的50, 100 甚至上千人于一个副本中同时在线. Colyseus 对于这种需求是如何满足的呢?</strong></p><p>CT: 好问题. Colyseus 非常灵活，它可以为任何游戏类型或使用要求提供解决方案，因为它是开箱即用的基于房间的后台服务系统. 根据游戏复杂程度, 每个房间可以轻松支持 1500 个并发玩家 (CCU). 要是你想制作大型多人在线游戏 (MMO), 我们建议你把 “游戏世界” 分成若干个房间, 再用多线程同步房间逻辑.</p><p>我们在自己的 MMO 游戏 CSC 中使用了这种 “分割游戏世界” 的方案. 具体来说就是把宇宙根据坐标分割为多个房间. 通过设置房间参数就能实现这个功能, 然后再让客户端根据房间参数加入各个房间即可.</p><p>举个例子, 当一个玩家进入游戏时, 他的坐标是太阳系 (我们设计的) 0, 0 点即太阳的位置. 当他移动的时候, 我们根据区域定义他的新坐标. 比如一个区域是 10,000 平方公里. 当他远离太阳时, 他的坐标可能是九宫格区域之一 (0,1 1,0 1,1 -1,0 以此类推.. – 房间命名比如 “sol_0_1 =  0,1” 这样). 为了移动平滑, 我们在一开始就让玩家进入了这 9 个房间. 即初始房间和九宫格的另外 8 个房间. 玩家移动时不断地离开房间和加入新房间, 使得他始终能收到当前坐标房间和移动方向目标房间的信息. 加入多个房间的另一用途就是为玩家提供全局消息 / 聊天消息 (比如 “sol_chat, sol_global” 房间). 全 3D 世界的话也可以使用类似机制, 不同的就是把二维坐标改成三维的.</p><p>对于服务缩放, 有许多解决方法, 主要取决于你的游戏类型和游戏设计. 每个服务器上每个房间应该容纳多少人上限要合理. 这个数值很大程度上取决于游戏类型, 每秒信息数量以及游戏逻辑复杂程度. 这就是我们为 Colyseus 提供的 SaaS 托管解决方案的魅力所在. 作为程序员, 你大可不必担心服务器容量, 比如新开房间, 游戏世界随玩家数量增长而变大之类的压力. 我们的 Colyseus Arena 系统能根据你的游戏服务压力情况自动部署新服务器以保持平衡, 确保每个房间都能高效运作.</p><p><strong>C: Colyseus 为开发者提供了什么样的功能?</strong></p><p>CT: 除了刚才提到的 “房间” 机制, Colyseus 还有独创的同步机制以取代平常的收发消息功能. 改变服务器状态时客户端都会收到回调反馈.</p><p>我们的房间状态同步算法能确保网路上只有必要的部分信息在传播. 当服务器端结构变化时, 客户端会在下个 “补间时段” 与服务器同步.</p><p><strong>C: 我们很多开发人员都是这个行业的新手，所以我们很想知道网络技术在过去几年里是如何进化到今天的?</strong></p><p>CT: 最近几年间最显著的进化是容器的引入以及系统的灵活和伸缩性. 使用容器能让开发者更有效地创建和卸载服务程序. 配置得当的话, 游戏就可以轻易支持更多玩家同时不需要维护和为多余的服务器买单. Colyseus 是基于 Node.js 的轻型框架, 天生就是完美的容器应用服务系统.</p><p>过去的游戏后台要么使用最高端昂贵的机器, 要么就是使用许多的虚拟机. 容器有点像虚拟机但是部署上比虚拟机快得多. 也就是说不管新开还是卸载都能很快完成, 省去了大量因为服务缩放而产生的费用.</p><p><img src="https://www.cocos.com/wp-content/uploads/2021/06/Farzi-Zubair-819x1024.png" alt="Farzi Zubair"><br><strong>Farzi Zubair</strong></p><p><strong>C: 感觉不错啊. 要是开发者开始使用 Colyseus 开发游戏, 你能给出一些对提升游戏有帮助的建议吗?</strong></p><p>CT: 任何第一次制作多人在线游戏的开发者都应该牢记以下事情.</p><ol><li><p>开发游戏时就要考虑到作弊者，并使服务器尽可能具有权威性——因为作弊会导致游戏的完全失败. 一旦您的游戏上线，您的团队会忙不迭地工作并且急于修补漏洞，而作弊部分可能会成为最为高昂的资源消耗。这就是为什么我总是建议开发人员从一开始就尝试使服务器尽可能具有权威性, 将可能影响游戏结果的逻辑和功能限制在服务器代码中, 杜绝玩家找到作弊或破解游戏的方法.</p></li><li><p>专注于游戏体验, 把服务器端交给值得信赖的 SaaS 服务 – 自托管非常适合开发调试, 但是一旦开始就要尽快找到你的 DevOps 解决方案或者 SaaS 服务. 我们见到许多开发商到离游戏上线还剩最后几周, 都还没有考虑服务器或 SaaS 的事.</p></li></ol><p>有一个叫做 Agones 的开源服务器就做得很好.  它运行在基于 Kubernetes  上的大量 docker 容器中. 但是, 要是独立开发者或者从未与托管服务打过交道, 你会发现忽略了服务器环境这个大问题.  这通常会导致服务器匹配和 SDK 整合的失败. 所以做游戏除了开发工作还不够, 还需要聘请 DevOps 工程师然后找到合适的服务器. 对于小型游戏工作室来说, 这无疑是一笔巨大的前期成本, 并且早晚都要支付.</p><p>所以 SaaS 服务可能是更好的选择. 使用合适的 SaaS 解决方案, 您只需按使用量或 CCU 付费, 在游戏上线初期费用很低, 而当游戏越来越受欢迎的时候轻松扩张. Colyseus Arena 就是这样的解决方案, 专门设计用来运行游戏的 Colyseus 代码.</p><ol start="3"><li>保持简单 – 这可能是我们为 MMO 游戏开发者给出的最重要建议. 开发多人游戏的新手很多都着眼于消息发送和游戏的复杂度上面. 我总是建议他们尽快制作游戏原型或 MVP. 然后进行游戏测试, 确保游戏体验, 然后将其作为模板, 以更有效率的方式重新创建游戏服务器/客户端. 这种二次开发中往往更有效率.</li></ol><p><strong>Colyseus 未来的目标是什么?</strong></p><p>我们的目标一直是做你想要的 “那个” 服务器. 我们从社区获得的请求大多是支持 WebSockets 以外的其他协议, 比如 rUDP 或 WebRTC. 另一个对我们很有意义的请求是提供一个实体-组件模式. 我们一直在倾听社区和客户的更多建议.</p>]]></content>
+    <content type="html"><![CDATA[<p>自从 Cocos Creator 3.0 之后, 我们更新了 <a href="http://store.cocos.com/app/en">Cocos Store</a>, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.<br>Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 <a href="https://www.colyseus.io/">Colyseus</a>.</p><a id="more"></a><p>如果你缺乏后台开发经验或者在开发多人在线游戏时遇到麻烦, 那么开源服务器 Colyseus 及其技术团队将成为你的救星. Colyseus 是一款易用, 好用的多人在线游戏服务器, 这一点已被诸多 HTML5 和手机游戏证明.</p><p>现在它来到了 <a href="http://store.cocos.com/app/detail/2937">Cocos Store</a>, 我们通力合作确保其在 Cocos Creator 上完美运行, 并且筹划了未来的合作规划.</p><p>这里我们有请 Colyseus 的创作者 <strong>Endel Dreyer</strong>, 与 Lucid Sight 的首席技术官, Colyseus 的拥有者 <strong>Farzi Zubair</strong> 接受采访.</p><hr><p><strong>Cocos: 很高兴采访二位. 对于没听说过 Colyseus 的开发者, 你们会如何介绍自己?</strong></p><p>Colyseus 团队: 直截了当, 我们的目的是将多人在线服务大众化, 所以我们开发了 Colyseus, 一款基于 Node.js 的高级多人在线后台服务平台.</p><p>我们的初心是简化多人在线游戏的实现, 以便开发者更专注于自己的游戏体验而不必承受后台开发的种种困难. 而且, Colyseus 提供服务端与客户端全套的解决方案就是为了方便开发者使用.</p><p><strong>C: 为什么基于 Node.js?</strong></p><p>CT: Node.js 通过各种方式致力于打造完美开发体验的生态系统. 其 JIT 编译器能提供比某些 C 语言程序高出许多倍的性能. Node.js 程序运行比 Java 需要的内存更少. 而且 Colyseus 得益于 Node.js 提供的各种模块. 各种问题都可以通过搜索 (和制作) 模块找到解决方法, 比如寻路, 导航, 连接数据库等等.</p><p><strong>C: 听起来很有吸引力. 那么 Colyseus 作为一款联网工具相对于开发者已有的网络工具有什么优势呢?</strong></p><p>CT: 市面上有许多多人在线服务框架. 但是以我们的经验, 我们能提供开发者需求的绝大多数功能. 作为独立开发者, 通常无力负担大额的游戏服务软件费用, 无法直接做到服务器扩张, 或者服务器代码难以修改以适应自己的游戏.</p><p>我们的软件是开源的, 这就为开发者提供了免费的服务器程序及其修改权 (MIT协议). 这也使得 <strong>Colyseus</strong> 能运行于各种容器, 并且缩放自如 (无论是自建还是订阅 <strong>Colyseus Arena</strong> 服务都能实现快速缩放), 高级 API 使得服务器与客户端沟通更加流畅.</p><p><strong>C: 我看到你们为很多游戏引擎开发了客户端, 但是作为西方最大支持者之一, 为什么看中 Cocos Creator 和 Cocos2d-x 了呢?</strong></p><p>CT: Cocos 产品名声在外. Cocos 社区也招人爱. 我们想为其游戏开发者提供最好的多人在线解决方案. 另外, 我们是开源社区的大fan, 专门支持像 Cocos 这样的开源项目.</p><p><strong>C: 我们注意到你们的产品是用 TypeScript 写的, 就像 Cocos Creator 一样. 为什么做出使用 TS 这个决定, 这对于 Cocos Creator 意味着什么?</strong></p><p>CT: TypeScript 意味着更好的可维护性. 对于程序员来说比 JavaScript 更好. JavaScript 程序员总是犯下拼写错误这类能直接导致服务器崩溃的失误. 但是一旦使用 TypeScript, 编译器就会阻止这种事情发生. Colyseus SDK 包含全部类型定义 - 你甚至可以从 Cocos Creator 里直接获取服务端状态变量.</p><p><strong>C: 让项目接入 Colyseus 服务有多容易?</strong></p><p>CT: 首先打开商店页面找到 Colyseus 插件. 下载安装.之后就可以在你的 Typescript 组件里使用了. 实现把客户端连接到一个 (或多个) 房间, 房间里的客户端互相传递信息, 监听服务器状态变化这样各种的功能.</p><p><strong>Endel Dreyer</strong></p><p><strong>C: 换个话题. 我们观察到多人在线游戏从以前的不到十人到如今的50, 100 甚至上千人于一个副本中同时在线. Colyseus 对于这种需求是如何满足的呢?</strong></p><p>CT: 好问题. Colyseus 非常灵活，它可以为任何游戏类型或使用要求提供解决方案，因为它是开箱即用的基于房间的后台服务系统. 根据游戏复杂程度, 每个房间可以轻松支持 1500 个并发玩家 (CCU). 要是你想制作大型多人在线游戏 (MMO), 我们建议你把 “游戏世界” 分成若干个房间, 再用多线程同步房间逻辑.</p><p>我们在自己的 MMO 游戏 CSC 中使用了这种 “分割游戏世界” 的方案. 具体来说就是把宇宙根据坐标分割为多个房间. 通过设置房间参数就能实现这个功能, 然后再让客户端根据房间参数加入各个房间即可.</p><p>举个例子, 当一个玩家进入游戏时, 他的坐标是太阳系 (我们设计的) 0, 0 点即太阳的位置. 当他移动的时候, 我们根据区域定义他的新坐标. 比如一个区域是 10,000 平方公里. 当他远离太阳时, 他的坐标可能是九宫格区域之一 (0,1 1,0 1,1 -1,0 以此类推.. – 房间命名比如 “sol_0_1 =  0,1” 这样). 为了移动平滑, 我们在一开始就让玩家进入了这 9 个房间. 即初始房间和九宫格的另外 8 个房间. 玩家移动时不断地离开房间和加入新房间, 使得他始终能收到当前坐标房间和移动方向目标房间的信息. 加入多个房间的另一用途就是为玩家提供全局消息 / 聊天消息 (比如 “sol_chat, sol_global” 房间). 全 3D 世界的话也可以使用类似机制, 不同的就是把二维坐标改成三维的.</p><p>对于服务缩放, 有许多解决方法, 主要取决于你的游戏类型和游戏设计. 每个服务器上每个房间应该容纳多少人上限要合理. 这个数值很大程度上取决于游戏类型, 每秒信息数量以及游戏逻辑复杂程度. 这就是我们为 Colyseus 提供的 SaaS 托管解决方案的魅力所在. 作为程序员, 你大可不必担心服务器容量, 比如新开房间, 游戏世界随玩家数量增长而变大之类的压力. 我们的 Colyseus Arena 系统能根据你的游戏服务压力情况自动部署新服务器以保持平衡, 确保每个房间都能高效运作.</p><p><strong>C: Colyseus 为开发者提供了什么样的功能?</strong></p><p>CT: 除了刚才提到的 “房间” 机制, Colyseus 还有独创的同步机制以取代平常的收发消息功能. 改变服务器状态时客户端都会收到回调反馈.</p><p>我们的房间状态同步算法能确保网路上只有必要的部分信息在传播. 当服务器端结构变化时, 客户端会在下个 “补间时段” 与服务器同步.</p><p><strong>C: 我们很多开发人员都是这个行业的新手，所以我们很想知道网络技术在过去几年里是如何进化到今天的?</strong></p><p>CT: 最近几年间最显著的进化是容器的引入以及系统的灵活和伸缩性. 使用容器能让开发者更有效地创建和卸载服务程序. 配置得当的话, 游戏就可以轻易支持更多玩家同时不需要维护和为多余的服务器买单. Colyseus 是基于 Node.js 的轻型框架, 天生就是完美的容器应用服务系统.</p><p>过去的游戏后台要么使用最高端昂贵的机器, 要么就是使用许多的虚拟机. 容器有点像虚拟机但是部署上比虚拟机快得多. 也就是说不管新开还是卸载都能很快完成, 省去了大量因为服务缩放而产生的费用.</p><p><strong>Farzi Zubair</strong></p><p><strong>C: 感觉不错啊. 要是开发者开始使用 Colyseus 开发游戏, 你能给出一些对提升游戏有帮助的建议吗?</strong></p><p>CT: 任何第一次制作多人在线游戏的开发者都应该牢记以下事情.</p><ol><li><p>开发游戏时就要考虑到作弊者，并使服务器尽可能具有权威性——因为作弊会导致游戏的完全失败. 一旦您的游戏上线，您的团队会忙不迭地工作并且急于修补漏洞，而作弊部分可能会成为最为高昂的资源消耗。这就是为什么我总是建议开发人员从一开始就尝试使服务器尽可能具有权威性, 将可能影响游戏结果的逻辑和功能限制在服务器代码中, 杜绝玩家找到作弊或破解游戏的方法.</p></li><li><p>专注于游戏体验, 把服务器端交给值得信赖的 SaaS 服务 – 自托管非常适合开发调试, 但是一旦开始就要尽快找到你的 DevOps 解决方案或者 SaaS 服务. 我们见到许多开发商到离游戏上线还剩最后几周, 都还没有考虑服务器或 SaaS 的事.</p></li></ol><p>有一个叫做 Agones 的开源服务器就做得很好.  它运行在基于 Kubernetes  上的大量 docker 容器中. 但是, 要是独立开发者或者从未与托管服务打过交道, 你会发现忽略了服务器环境这个大问题.  这通常会导致服务器匹配和 SDK 整合的失败. 所以做游戏除了开发工作还不够, 还需要聘请 DevOps 工程师然后找到合适的服务器. 对于小型游戏工作室来说, 这无疑是一笔巨大的前期成本, 并且早晚都要支付.</p><p>所以 SaaS 服务可能是更好的选择. 使用合适的 SaaS 解决方案, 您只需按使用量或 CCU 付费, 在游戏上线初期费用很低, 而当游戏越来越受欢迎的时候轻松扩张. Colyseus Arena 就是这样的解决方案, 专门设计用来运行游戏的 Colyseus 代码.</p><ol start="3"><li>保持简单 – 这可能是我们为 MMO 游戏开发者给出的最重要建议. 开发多人游戏的新手很多都着眼于消息发送和游戏的复杂度上面. 我总是建议他们尽快制作游戏原型或 MVP. 然后进行游戏测试, 确保游戏体验, 然后将其作为模板, 以更有效率的方式重新创建游戏服务器/客户端. 这种二次开发中往往更有效率.</li></ol><p><strong>Colyseus 未来的目标是什么?</strong></p><p>我们的目标一直是做你想要的 “那个” 服务器. 我们从社区获得的请求大多是支持 WebSockets 以外的其他协议, 比如 rUDP 或 WebRTC. 另一个对我们很有意义的请求是提供一个实体-组件模式. 我们一直在倾听社区和客户的更多建议.</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;自从 Cocos Creator 3.0 之后, 我们更新了 &lt;a href=&quot;http://store.cocos.com/app/en&quot;&gt;Cocos Store&lt;/a&gt;, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.&lt;br&gt;Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 &lt;a href=&quot;https://www.colyseus.io/&quot;&gt;Colyseus&lt;/a&gt;.&lt;/p&gt;</summary>
@@ -250,8 +282,6 @@
     
     
     <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
-    
-    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
     
   </entry>
   

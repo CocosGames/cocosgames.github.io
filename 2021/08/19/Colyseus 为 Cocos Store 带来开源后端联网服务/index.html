@@ -18,16 +18,11 @@
 <meta property="og:site_name" content="Coco&#39;s Games">
 <meta property="og:description" content="自从 Cocos Creator 3.0 之后, 我们更新了 Cocos Store, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 Colyseus.">
 <meta property="og:locale">
-<meta property="og:image" content="https://www.cocos.com/wp-content/uploads/2021/06/ColyseusLogo-1024x563.png">
-<meta property="og:image" content="https://www.cocos.com/wp-content/uploads/2021/06/Endel-Dreyer-1024x1024.jpg">
-<meta property="og:image" content="https://www.cocos.com/wp-content/uploads/2021/06/Farzi-Zubair-819x1024.png">
 <meta property="article:published_time" content="2021-08-19T10:49:26.208Z">
-<meta property="article:modified_time" content="2023-03-13T11:16:07.958Z">
+<meta property="article:modified_time" content="2025-01-19T02:24:57.652Z">
 <meta property="article:author" content="Coco&#39;s Games">
 <meta property="article:tag" content="blog">
-<meta property="article:tag" content="game">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.cocos.com/wp-content/uploads/2021/06/ColyseusLogo-1024x563.png">
   
     <link rel="alternative" href="/atom.xml" title="Coco&#39;s Games" type="application/atom+xml">
   
@@ -94,6 +89,8 @@
 				<li><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666" >DEMO</a></li>
 			
 				<li><a href="/tags/game/" >GAME</a></li>
+			
+				<li><a href="/tags/shop/" >SHOP</a></li>
 			
 			</ul>
 		</nav>
@@ -167,6 +164,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -187,13 +186,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">HOME</a></li>
+					<li style="width: 20%"><a href="/">HOME</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/blog/">BLOG</a></li>
+					<li style="width: 20%"><a href="/tags/blog/">BLOG</a></li>
 		        
-					<li style="width: 25%"><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666">DEMO</a></li>
+					<li style="width: 20%"><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666">DEMO</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/game/">GAME</a></li>
+					<li style="width: 20%"><a href="/tags/game/">GAME</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/shop/">SHOP</a></li>
 		        
 				</ul>
 			</nav>
@@ -248,7 +249,7 @@
     
         <p>自从 Cocos Creator 3.0 之后, 我们更新了 <a target="_blank" rel="noopener" href="http://store.cocos.com/app/en">Cocos Store</a>, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.<br>Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 <a target="_blank" rel="noopener" href="https://www.colyseus.io/">Colyseus</a>.</p>
 <a id="more"></a>
-<p><img src="https://www.cocos.com/wp-content/uploads/2021/06/ColyseusLogo-1024x563.png" alt="Colyseus"></p>
+
 <p>如果你缺乏后台开发经验或者在开发多人在线游戏时遇到麻烦, 那么开源服务器 Colyseus 及其技术团队将成为你的救星. Colyseus 是一款易用, 好用的多人在线游戏服务器, 这一点已被诸多 HTML5 和手机游戏证明.</p>
 <p>现在它来到了 <a target="_blank" rel="noopener" href="http://store.cocos.com/app/detail/2937">Cocos Store</a>, 我们通力合作确保其在 Cocos Creator 上完美运行, 并且筹划了未来的合作规划.</p>
 <p>这里我们有请 Colyseus 的创作者 <strong>Endel Dreyer</strong>, 与 Lucid Sight 的首席技术官, Colyseus 的拥有者 <strong>Farzi Zubair</strong> 接受采访.</p>
@@ -267,7 +268,6 @@
 <p>CT: TypeScript 意味着更好的可维护性. 对于程序员来说比 JavaScript 更好. JavaScript 程序员总是犯下拼写错误这类能直接导致服务器崩溃的失误. 但是一旦使用 TypeScript, 编译器就会阻止这种事情发生. Colyseus SDK 包含全部类型定义 - 你甚至可以从 Cocos Creator 里直接获取服务端状态变量.</p>
 <p><strong>C: 让项目接入 Colyseus 服务有多容易?</strong></p>
 <p>CT: 首先打开商店页面找到 Colyseus 插件. 下载安装.之后就可以在你的 Typescript 组件里使用了. 实现把客户端连接到一个 (或多个) 房间, 房间里的客户端互相传递信息, 监听服务器状态变化这样各种的功能.</p>
-<p><img src="https://www.cocos.com/wp-content/uploads/2021/06/Endel-Dreyer-1024x1024.jpg" alt="Endel Dreyer"></p>
 <p><strong>Endel Dreyer</strong></p>
 <p><strong>C: 换个话题. 我们观察到多人在线游戏从以前的不到十人到如今的50, 100 甚至上千人于一个副本中同时在线. Colyseus 对于这种需求是如何满足的呢?</strong></p>
 <p>CT: 好问题. Colyseus 非常灵活，它可以为任何游戏类型或使用要求提供解决方案，因为它是开箱即用的基于房间的后台服务系统. 根据游戏复杂程度, 每个房间可以轻松支持 1500 个并发玩家 (CCU). 要是你想制作大型多人在线游戏 (MMO), 我们建议你把 “游戏世界” 分成若干个房间, 再用多线程同步房间逻辑.</p>
@@ -280,7 +280,7 @@
 <p><strong>C: 我们很多开发人员都是这个行业的新手，所以我们很想知道网络技术在过去几年里是如何进化到今天的?</strong></p>
 <p>CT: 最近几年间最显著的进化是容器的引入以及系统的灵活和伸缩性. 使用容器能让开发者更有效地创建和卸载服务程序. 配置得当的话, 游戏就可以轻易支持更多玩家同时不需要维护和为多余的服务器买单. Colyseus 是基于 Node.js 的轻型框架, 天生就是完美的容器应用服务系统.</p>
 <p>过去的游戏后台要么使用最高端昂贵的机器, 要么就是使用许多的虚拟机. 容器有点像虚拟机但是部署上比虚拟机快得多. 也就是说不管新开还是卸载都能很快完成, 省去了大量因为服务缩放而产生的费用.</p>
-<p><img src="https://www.cocos.com/wp-content/uploads/2021/06/Farzi-Zubair-819x1024.png" alt="Farzi Zubair"><br><strong>Farzi Zubair</strong></p>
+<p><strong>Farzi Zubair</strong></p>
 <p><strong>C: 感觉不错啊. 要是开发者开始使用 Colyseus 开发游戏, 你能给出一些对提升游戏有帮助的建议吗?</strong></p>
 <p>CT: 任何第一次制作多人在线游戏的开发者都应该牢记以下事情.</p>
 <ol>
@@ -308,10 +308,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
         		</li>
       		
 		</ul>

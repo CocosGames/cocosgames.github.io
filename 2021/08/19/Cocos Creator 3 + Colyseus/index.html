@@ -18,15 +18,11 @@
 <meta property="og:site_name" content="Coco&#39;s Games">
 <meta property="og:description" content="Cocos Creator 是跨平台 2D&#x2F;3D 游戏开发工具.">
 <meta property="og:locale">
-<meta property="og:image" content="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-component.png">
-<meta property="og:image" content="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-import-as-plugin.png">
 <meta property="article:published_time" content="2021-08-19T10:50:48.583Z">
-<meta property="article:modified_time" content="2023-03-13T11:16:07.942Z">
+<meta property="article:modified_time" content="2025-01-19T02:26:11.545Z">
 <meta property="article:author" content="Coco&#39;s Games">
 <meta property="article:tag" content="blog">
-<meta property="article:tag" content="game">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-component.png">
   
     <link rel="alternative" href="/atom.xml" title="Coco&#39;s Games" type="application/atom+xml">
   
@@ -93,6 +89,8 @@
 				<li><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666" >DEMO</a></li>
 			
 				<li><a href="/tags/game/" >GAME</a></li>
+			
+				<li><a href="/tags/shop/" >SHOP</a></li>
 			
 			</ul>
 		</nav>
@@ -166,6 +164,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -186,13 +186,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">HOME</a></li>
+					<li style="width: 20%"><a href="/">HOME</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/blog/">BLOG</a></li>
+					<li style="width: 20%"><a href="/tags/blog/">BLOG</a></li>
 		        
-					<li style="width: 25%"><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666">DEMO</a></li>
+					<li style="width: 20%"><a target="_blank" rel="noopener" href="https://www.youtube.com/@cocosgames666">DEMO</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/game/">GAME</a></li>
+					<li style="width: 20%"><a href="/tags/game/">GAME</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/shop/">SHOP</a></li>
 		        
 				</ul>
 			</nav>
@@ -315,7 +317,6 @@ export class NetworkManager extends Component &#123;
 &#125;</code></pre>
 <p>然后就可以把 NetworkManager 作为组件安放在 Cocos Creator 的任意节点上.</p>
 <p>因为上面用到了 @property 装饰词, 所以 hostname, port 和 useSSL 这些变量都可以在 Cocos Creator 中修改:</p>
-<p><img src="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-component.png" alt="Colyseus SDK on TypeScript Component"></p>
 <hr>
 <h4 id="另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件"><a href="#另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件" class="headerlink" title="另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)"></a>另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)</h4><ul>
 <li><p><a target="_blank" rel="noopener" href="https://github.com/colyseus/colyseus.js/releases">从 GitHub 上下载最新版 <code>colyseus-js-client.zip</code></a>.</p>
@@ -331,7 +332,6 @@ export class NetworkManager extends Component &#123;
 <li><p><strong>JavaScript</strong>: 使用 <code>const Colyseus = require(&quot;./colyseus.js&quot;);</code> 引入</p>
 </li>
 </ul>
-<p><img src="https://docs.colyseus.io/colyseus/getting-started/cocos-creator-import-as-plugin.png" alt="Import as plugin"></p>
 
     
   </div>
@@ -344,10 +344,6 @@ export class NetworkManager extends Component &#123;
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
         		</li>
       		
 		</ul>
