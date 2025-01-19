@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-19T03:26:33.150Z</updated>
+  <updated>2025-01-19T05:18:27.637Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>又换引擎了 -- OpenFL!</title>
+    <link href="https://cocosgames.com/2025/01/19/OpenFL/"/>
+    <id>https://cocosgames.com/2025/01/19/OpenFL/</id>
+    <published>2025-01-19T05:05:40.952Z</published>
+    <updated>2025-01-19T05:18:27.637Z</updated>
+    
+    <content type="html"><![CDATA[<p>2025年我打算做一些小的转型.<br>首先, 网站文字会以中文为主. 然后我还加入了购物功能, 准备和 PayPal 按钮配合出售作品.<br>其次, 我又换引擎了. 从 cocos 换到 Defold 是因为 cocos 在稳定性方面存在不少问题, 难以依赖.<br>换掉 Defold 绝对不是因为 Defold 不好, Defold 在我印象里是又小巧, 又精密, 又灵活, 又完整的游戏引擎.<br>这次从 Defold 换成 OpenFL 纯粹是因为<strong>怀旧</strong>.</p><p>人, 岁数一大就爱怀旧, 看到 OpenFL 的代码时我的思绪瞬间被拉回到当初用 AS3 写 Flash 的日子.<br><strong>Haxe + Lime + OpenFL + Starling</strong><br>多么像 Flash 啊! 虽然 Flash 早已成为过去式. 但是 OpenFL 和 Lime 开辟了一个新的天地, 一个经典, 又新潮的天地.</p><p>不知我能用 OpenFL 写出什么样的作品呢? 我们一起加油吧!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2025年我打算做一些小的转型.&lt;br&gt;首先, 网站文字会以中文为主. 然后我还加入了购物功能, 准备和 PayPal 按钮配合出售作品.&lt;br&gt;其次, 我又换引擎了. 从 cocos 换到 Defold 是因为 cocos 在稳定性方面存在不少问题, 难以依赖.&lt;br&gt;换</summary>
+      
+    
+    
+    
+    
+    <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sudoku</title>
+    <link href="https://cocosgames.com/2025/01/19/sudoku/"/>
+    <id>https://cocosgames.com/2025/01/19/sudoku/</id>
+    <published>2025-01-19T04:37:25.157Z</published>
+    <updated>2025-01-19T05:04:12.395Z</updated>
+    
+    <content type="html"><![CDATA[<p>数独是我使用 cocos creator 2 创作的小游戏.<br><img src="/assets/sudoku/4f0f917ddc0d314e069125d916b1b7cd27a6a452_2_690x386.png" alt="image"></p><a id="more"></a><p>游戏特性有:</p><ul><li><p>易/中/难/巨难 四种难度选择</p></li><li><p>实时自动生成题面，也可以保存题面以供加载</p></li><li><p>屏幕适配</p></li><li><p>解题系统 （1，改正玩家错误数据；2，如果需要自动显示候选数；3，给出解题过程）</p></li><li><p>屏幕旋转方向适配</p></li></ul><p><img src="/assets/sudoku/29fb327842f9609226940afab27fe98718c88f8b_2_281x500.gif" alt="image"></p><p><img src="/assets/sudoku/d66a8cf9a6b48c2e6842b5cda15e16a9e5abba2f.gif" alt="image"></p><p>核心代码基于 <a href="https://github.com/pocketjoso/sudokuJS/blob/master/sudokuJS.js">https://github.com/pocketjoso/sudokuJS/blob/master/sudokuJS.js</a> （MIT协议）<br>我做了一点小修改以便它适应cocos creator.</p><p>游戏最终因为显示效率低下而放弃, 现在 cocos 官方推出了 cocos creator 3, 不知显示效率是否提升了呢?</p><p>开源地址:<br><a href="https://github.com/CocosGames/NewSudoku_beta">https://github.com/CocosGames/NewSudoku_beta</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;数独是我使用 cocos creator 2 创作的小游戏.&lt;br&gt;&lt;img src=&quot;/assets/sudoku/4f0f917ddc0d314e069125d916b1b7cd27a6a452_2_690x386.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="game" scheme="https://cocosgames.com/tags/game/"/>
+    
+  </entry>
   
   <entry>
     <title>Server Physics</title>
@@ -63,7 +104,7 @@
     <link href="https://cocosgames.com/2025/01/01/HAPPY%20NEW%20YEAR%202025/"/>
     <id>https://cocosgames.com/2025/01/01/HAPPY%20NEW%20YEAR%202025/</id>
     <published>2025-01-01T05:40:41.395Z</published>
-    <updated>2025-01-01T05:47:37.983Z</updated>
+    <updated>2025-01-19T05:08:38.601Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/happy-new-year.jpg" alt="hny" title="happy new year"></p><a id="more"></a><h2 id="Wishing-you-all-a-very-happy-and-healthy-New-Year"><a href="#Wishing-you-all-a-very-happy-and-healthy-New-Year" class="headerlink" title="Wishing you all a very happy and healthy New Year!"></a>Wishing you all a very happy and healthy New Year!</h2>]]></content>
     
