@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-01-19T07:44:55.754Z</updated>
+  <updated>2025-02-03T07:22:36.570Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个图集搞定背景前景和数字渲染</title>
+    <link href="https://cocosgames.com/2025/02/03/one_atlas/"/>
+    <id>https://cocosgames.com/2025/02/03/one_atlas/</id>
+    <published>2025-02-03T06:46:24.642Z</published>
+    <updated>2025-02-03T07:22:36.570Z</updated>
+    
+    <content type="html"><![CDATA[<p>多亏了 <a href="https://www.codeandweb.com/">codeandweb</a> 推出的易用又功能强大的 <a href="https://www.codeandweb.com/texturepacker">TexturePacker</a> 和流行游戏引擎 cocos creator 3,<br>使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.<br>下面我们具体说说.</p><a id="more"></a><h3 id="1-设计场景界面"><a href="#1-设计场景界面" class="headerlink" title="1. 设计场景界面"></a>1. 设计场景界面</h3><p>首先, 在 Photoshop 里设计好界面的各个部分, 注意这里分三部分: 背景图块, 前景界面, 艺术数字<br><img src="/assets/one_atlas/%E8%AE%BE%E8%AE%A1.png" alt="图片"></p><h3 id="2-导出并合并图集"><a href="#2-导出并合并图集" class="headerlink" title="2. 导出并合并图集"></a>2. 导出并合并图集</h3><p>然后, 把各个部分分别导出成小图, 保存在一个地方.<br>启动 TexturePacker, 把各个小图合并成一个图集, 选择 cocos2d-x 格式, 配置挤出一像素, 导出图集.<br><img src="/assets/one_atlas/%E5%9B%BE%E9%9B%86.png" alt="图片"></p><h3 id="3-创建艺术字资源"><a href="#3-创建艺术字资源" class="headerlink" title="3. 创建艺术字资源"></a>3. 创建艺术字资源</h3><p>启动 Cocos Creator 3, 把刚刚打好的图集拖拽进来. 系统会自动把图集分割成小图资源.<br>右键单击选择新建艺术字资源, 把图集里0~9的数字那个图片拖进来, 设置好宽高和起始数字.<br><img src="/assets/one_atlas/%E8%89%BA%E6%9C%AF%E5%AD%97.png" alt="图片"></p><h3 id="4-合并完整场景"><a href="#4-合并完整场景" class="headerlink" title="4. 合并完整场景"></a>4. 合并完整场景</h3><p>最后, 在游戏场景中拖入小图, 恢复成设计时的样子. 注意此时艺术数字已经可以正常使用.<br><img src="/assets/one_atlas/%E5%85%A8%E9%83%A8.png" alt="图片"></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这里用到的 TexturePacker 和 cocos creator 3, 都是功能强大的软件, 不但强大而且易于使用, 非常感谢这两款软件的作者.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;多亏了 &lt;a href=&quot;https://www.codeandweb.com/&quot;&gt;codeandweb&lt;/a&gt; 推出的易用又功能强大的 &lt;a href=&quot;https://www.codeandweb.com/texturepacker&quot;&gt;TexturePacker&lt;/a&gt; 和流行游戏引擎 cocos creator 3,&lt;br&gt;使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.&lt;br&gt;下面我们具体说说.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>以前用cocos制作的小游戏</title>
@@ -398,25 +417,6 @@
     
     
     <summary type="html">My learning to wren language in Chinese part 1</summary>
-    
-    
-    
-    
-    <category term="blog" scheme="https://cocosgames.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Misunderstanding About Chinese TaiChi</title>
-    <link href="https://cocosgames.com/2021/04/12/taichi/"/>
-    <id>https://cocosgames.com/2021/04/12/taichi/</id>
-    <published>2021-04-12T06:38:57.524Z</published>
-    <updated>2021-04-15T07:38:53.653Z</updated>
-    
-    <content type="html"><![CDATA[<p>Because I am a Chinese, I know China very well.<br>Today I want to talk about Chinese Taijiquan(TaiChi). People from other countries, even the Chinese themselves, have completely deviated from the right track of TaiChi. This make scammers opportunities to conduct fraudulent activities.<br>So I want to correct these prejudices and prevent good people from being deceived. TaiChi is an ancient Chinese martial technique and also an art. Its function is to subdue opponents in confrontation (not killing them).<br>There are no other profound meanings, the harmony of the universe, the flow of energy, they are all made up by some people for hype.</p><h3 id="TaiChi-Moves-Slowly"><a href="#TaiChi-Moves-Slowly" class="headerlink" title="TaiChi Moves Slowly"></a>TaiChi Moves Slowly</h3><p>There is a reason. A real TaiChi boxer exercises a lot every day. But in ancient times you could not just find someone to beat, so most boxers practice alone.<br>No matter how strong you are, punches to the air, no force point, can hurt you. The longer you exercise, the greater the damage you will suffer.<br>Therefore, smart boxers will not use their 100% force to beat the air, but they will be gentle. Yes, practice the movements slowly.<br>The purpose is to strengthen the memory of the movements, not to train their own strength. But some people find that TaiChi movements are so slow, which is very suitable for old people who not able to do a lot of exercise.<br>But at this time that is not TaiChi, it’s just movement exercises for old people.</p><h3 id="TaiChi-can-harmonize-yin-and-yang-and-harmonize-the-universe"><a href="#TaiChi-can-harmonize-yin-and-yang-and-harmonize-the-universe" class="headerlink" title="TaiChi can harmonize yin and yang and harmonize the universe"></a>TaiChi can harmonize yin and yang and harmonize the universe</h3><p>Don’t believe the rhetoric fabricated by swindlers, they just want to make money.</p><h3 id="TaiChi-Trying-Avoid-Frontal-Confrontation"><a href="#TaiChi-Trying-Avoid-Frontal-Confrontation" class="headerlink" title="TaiChi Trying Avoid Frontal Confrontation"></a>TaiChi Trying Avoid Frontal Confrontation</h3><p>  <img src="/assets/taichi/quanji.jpg" alt="Boxing" title="Boxing"><br>  <img src="/assets/taichi/baiheliangchi.jpg" alt="TaiChi" title="TaiChi"></p><p>Boxing includes offense and defense. When defending, boxers use thick boxing gloves to cover the face. But TaiChi boxers don’t have gloves. Boxers want to avoid any punch.<br>They open their arms and open the their front side so they can quickly apply lateral force when opponents attacking. Instead of using the body to resist the impact.<br>In other words, this is the wisdom and superb technique of the ancients. Now I can not see any self-proclaimed master who got this technique.</p>]]></content>
-    
-    
-    <summary type="html">I want to explain the misunderstanding about Chinese TaiChi☯.</summary>
     
     
     
