@@ -6,7 +6,7 @@
   <link href="https://cocosgames.com/atom.xml" rel="self"/>
   
   <link href="https://cocosgames.com/"/>
-  <updated>2025-03-01T07:36:04.290Z</updated>
+  <updated>2025-03-02T06:11:57.669Z</updated>
   <id>https://cocosgames.com/</id>
   
   <author>
@@ -21,12 +21,13 @@
     <link href="https://cocosgames.com/2025/02/22/PolyShapes/"/>
     <id>https://cocosgames.com/2025/02/22/PolyShapes/</id>
     <published>2025-02-22T08:21:05.132Z</published>
-    <updated>2025-03-01T07:36:04.290Z</updated>
+    <updated>2025-03-02T06:11:57.669Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/assets/polyshapes/main.png" title="0"><br><a href="https://cocosgames.itch.io/polyshapes" title="play"><img src="/assets/polyshapes/play.png" alt="图片占位" title="play"></a></p><a id="more"></a><p><img src="/assets/polyshapes/11.png" title="1"><br><img src="/assets/polyshapes/22.png" title="2"><br><img src="/assets/polyshapes/33.png" title="3"><br><img src="/assets/polyshapes/44.png" title="4"><br><img src="/assets/polyshapes/55.png" title="5"></p><p>Click the button above to play it online.<br>This game is called PolyShapes and is a physics puzzle game.<br>Enlarge or shrink the shapes by touching them to reach their destination.</p><p>Games Features:</p><ul><li>new player guide</li><li>Physics with Box2D</li><li>High Resolution 1280x720</li><li>24 different levels</li><li>Full source</li><li>Cross-platform with Cocos Creator <sup>*</sup></li><li>AdMob support <sup>*</sup></li><li>Atlas and PSD art files included <sup>*</sup></li></ul><p>[*] this will be included in the up coming updates.</p><p>The game is developed with <a href="https://cocos.com/">Cocos Creator</a> v3.8.6.<br>Cocos Creator is a free game engine and game editor.<br>It supports high performance and cross-platform games development.</p><p>In this zip package you will get full source code and the game itself.<br>You can build your own version of the game.</p><p>This game’s exclusive license is also for sale.<br>Contact us with <a href="mailto:&#115;&#97;&#108;&#101;&#115;&#x40;&#x63;&#x6f;&#x63;&#111;&#x73;&#x67;&#x61;&#x6d;&#101;&#115;&#46;&#x63;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#x40;&#x63;&#x6f;&#x63;&#111;&#x73;&#x67;&#x61;&#x6d;&#101;&#115;&#46;&#x63;&#111;&#109;</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/assets/polyshapes/main.png" alt="" title="0"><br><a href="https://cocosgames.itch.io/polyshapes" title="play"><img src="/assets/polyshapes/play.png" alt="图片占位" title="play"></a></p><a id="more"></a><p><img src="/assets/polyshapes/11.png" alt="" title="1"><br><img src="/assets/polyshapes/22.png" alt="" title="2"><br><img src="/assets/polyshapes/33.png" alt="" title="3"><br><img src="/assets/polyshapes/44.png" alt="" title="4"><br><img src="/assets/polyshapes/55.png" alt="" title="5"></p><p>Click the button above to play it online.<br>This game is called PolyShapes and is a physics puzzle game.<br>Enlarge or shrink the shapes by touching them to reach their destination.</p><p>Games Features:</p><ul><li>new player guide</li><li>Physics with Box2D</li><li>High Resolution 1280x720</li><li>24 different levels</li><li>Full source</li><li>Cross-platform with Cocos Creator <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li><li>AdMob support <sup class="footnote-ref"><a href="#fn1" id="fnref1:1">[1:1]</a></sup></li><li>Atlas and PSD art files included <sup class="footnote-ref"><a href="#fn1" id="fnref1:2">[1:2]</a></sup></li></ul><p>The game is developed with <a href="https://cocos.com/">Cocos Creator</a> v3.8.6.<br>Cocos Creator is a free game engine and game editor.<br>It supports high performance and cross-platform games development.</p><p>In this zip package you will get full source code and the game itself.<br>You can build your own version of the game.</p><p>This game’s exclusive license is also for sale.<br>Contact us with <a href="mailto:sales@cocosgames.com">sales@cocosgames.com</a>.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>this will be included in the up coming updates. <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a> <a href="#fnref1:2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/assets/polyshapes/main.png&quot; title=&quot;0&quot;&gt;&lt;br&gt;&lt;a href=&quot;https://cocosgames.itch.io/polyshapes&quot; title=&quot;play&quot;&gt;&lt;img src=&quot;/assets/polyshapes/play.png&quot; alt=&quot;图片占位&quot; title=&quot;play&quot;&gt;&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/assets/polyshapes/main.png&quot; alt=&quot;&quot; title=&quot;0&quot;&gt;&lt;br&gt;
+&lt;a href=&quot;https://cocosgames.itch.io/polyshapes&quot; title=&quot;play&quot;&gt;&lt;img src=&quot;/assets/polyshapes/play.png&quot; alt=&quot;图片占位&quot; title=&quot;play&quot;&gt;&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
