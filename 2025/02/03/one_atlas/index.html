@@ -11,12 +11,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="多亏了 codeandweb 推出的易用又功能强大的 TexturePacker 和流行游戏引擎 cocos creator 3,使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.下面我们具体说说.">
+  <meta name="description" content="多亏了 codeandweb 推出的易用又功能强大的 TexturePacker 和流行游戏引擎 cocos creator 3, 使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码. 下面我们具体说说.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个图集搞定背景前景和数字渲染">
 <meta property="og:url" content="https://cocosgames.com/2025/02/03/one_atlas/index.html">
 <meta property="og:site_name" content="Coco&#39;s Games">
-<meta property="og:description" content="多亏了 codeandweb 推出的易用又功能强大的 TexturePacker 和流行游戏引擎 cocos creator 3,使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.下面我们具体说说.">
+<meta property="og:description" content="多亏了 codeandweb 推出的易用又功能强大的 TexturePacker 和流行游戏引擎 cocos creator 3, 使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码. 下面我们具体说说.">
 <meta property="og:locale">
 <meta property="og:image" content="https://cocosgames.com/assets/one_atlas/x.png">
 <meta property="og:image" content="https://cocosgames.com/assets/one_atlas/%E8%AE%BE%E8%AE%A1.png">
@@ -245,15 +245,28 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-        <p><img src="/assets/one_atlas/x.png" alt="图片"><br>多亏了 <a target="_blank" rel="noopener" href="https://www.codeandweb.com/">codeandweb</a> 推出的易用又功能强大的 <a target="_blank" rel="noopener" href="https://www.codeandweb.com/texturepacker">TexturePacker</a> 和流行游戏引擎 cocos creator 3,<br>使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.<br>下面我们具体说说.</p>
+        <p><img src="/assets/one_atlas/x.png" alt="图片"><br>
+多亏了 <a target="_blank" rel="noopener" href="https://www.codeandweb.com/">codeandweb</a> 推出的易用又功能强大的 <a target="_blank" rel="noopener" href="https://www.codeandweb.com/texturepacker">TexturePacker</a> 和流行游戏引擎 cocos creator 3,<br>
+使得一个图集搞定背景前景和数字渲染成为可能, 而且不用编写一行代码.<br>
+下面我们具体说说.</p>
 <a id="more"></a>
-
-
-<h3 id="1-设计场景界面"><a href="#1-设计场景界面" class="headerlink" title="1. 设计场景界面"></a>1. 设计场景界面</h3><p>首先, 在 Photoshop 里设计好界面的各个部分, 注意这里分三部分: 背景图块, 前景界面和艺术数字.<br><img src="/assets/one_atlas/%E8%AE%BE%E8%AE%A1.png" alt="图片"></p>
-<h3 id="2-导出并合并图集"><a href="#2-导出并合并图集" class="headerlink" title="2. 导出并合并图集"></a>2. 导出并合并图集</h3><p>然后, 把各个部分分别导出成小图, 保存在一个地方.<br>启动 TexturePacker, 把各个小图合并成一个图集, 选择 cocos2d-x 格式, 配置挤出一像素, 导出图集.<br><img src="/assets/one_atlas/%E5%9B%BE%E9%9B%86.png" alt="图片"></p>
-<h3 id="3-创建艺术字资源"><a href="#3-创建艺术字资源" class="headerlink" title="3. 创建艺术字资源"></a>3. 创建艺术字资源</h3><p>启动 Cocos Creator 3, 把刚刚打好的图集拖拽进来. 系统会自动把图集分割成小图资源.<br>右键单击选择新建艺术字资源, 把图集里0~9的数字那个图片拖进来, 设置好宽高和起始数字.<br><img src="/assets/one_atlas/%E8%89%BA%E6%9C%AF%E5%AD%97.png" alt="图片"></p>
-<h3 id="4-合并完整场景"><a href="#4-合并完整场景" class="headerlink" title="4. 合并完整场景"></a>4. 合并完整场景</h3><p>最后, 在游戏场景中拖入小图, 恢复成设计时的样子. 注意此时艺术数字已经可以正常使用.<br><img src="/assets/one_atlas/%E5%85%A8%E9%83%A8.png" alt="图片"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>使用一个只有90kb的图集实现了背景, 前景和数字渲染.<br>这里用到的 TexturePacker 和 cocos creator 3, 都是功能强大的软件, 不但强大而且易于使用, 非常感谢这两款软件的作者.</p>
+<h3 id="1-设计场景界面"><a class="header-anchor" href="#1-设计场景界面">¶</a>1. 设计场景界面</h3>
+<p>首先, 在 Photoshop 里设计好界面的各个部分, 注意这里分三部分: 背景图块, 前景界面和艺术数字.<br>
+<img src="/assets/one_atlas/%E8%AE%BE%E8%AE%A1.png" alt="图片"></p>
+<h3 id="2-导出并合并图集"><a class="header-anchor" href="#2-导出并合并图集">¶</a>2. 导出并合并图集</h3>
+<p>然后, 把各个部分分别导出成小图, 保存在一个地方.<br>
+启动 TexturePacker, 把各个小图合并成一个图集, 选择 cocos2d-x 格式, 配置挤出一像素, 导出图集.<br>
+<img src="/assets/one_atlas/%E5%9B%BE%E9%9B%86.png" alt="图片"></p>
+<h3 id="3-创建艺术字资源"><a class="header-anchor" href="#3-创建艺术字资源">¶</a>3. 创建艺术字资源</h3>
+<p>启动 Cocos Creator 3, 把刚刚打好的图集拖拽进来. 系统会自动把图集分割成小图资源.<br>
+右键单击选择新建艺术字资源, 把图集里0~9的数字那个图片拖进来, 设置好宽高和起始数字.<br>
+<img src="/assets/one_atlas/%E8%89%BA%E6%9C%AF%E5%AD%97.png" alt="图片"></p>
+<h3 id="4-合并完整场景"><a class="header-anchor" href="#4-合并完整场景">¶</a>4. 合并完整场景</h3>
+<p>最后, 在游戏场景中拖入小图, 恢复成设计时的样子. 注意此时艺术数字已经可以正常使用.<br>
+<img src="/assets/one_atlas/%E5%85%A8%E9%83%A8.png" alt="图片"></p>
+<h3 id="总结"><a class="header-anchor" href="#总结">¶</a>总结</h3>
+<p>使用一个只有90kb的图集实现了背景, 前景和数字渲染.<br>
+这里用到的 TexturePacker 和 cocos creator 3, 都是功能强大的软件, 不但强大而且易于使用, 非常感谢这两款软件的作者.</p>
 
     
   </div>

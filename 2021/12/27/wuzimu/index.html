@@ -11,12 +11,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="哈嘍大家好! 這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?(基於包體原因 Github 上的項目中去掉了背景)">
+  <meta name="description" content="哈嘍大家好! 這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?  (基於包體原因 Github 上的項目中去掉了背景)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Defold + Colyseus Arena 《五子目》">
 <meta property="og:url" content="https://cocosgames.com/2021/12/27/wuzimu/index.html">
 <meta property="og:site_name" content="Coco&#39;s Games">
-<meta property="og:description" content="哈嘍大家好! 這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?(基於包體原因 Github 上的項目中去掉了背景)">
+<meta property="og:description" content="哈嘍大家好! 這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?  (基於包體原因 Github 上的項目中去掉了背景)">
 <meta property="og:locale">
 <meta property="og:image" content="https://cocosgames.com/assets/wuzimu/wuzimu.png">
 <meta property="og:image" content="https://cocosgames.com/assets/wuzimu/colyseus.png">
@@ -244,20 +244,38 @@
   <div class="article-entry" itemprop="articleBody">
     
         <p>哈嘍大家好!</p>
-<p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?<br><img src="/assets/wuzimu/wuzimu.png" alt="wuzimu.png"><br>(基於包體原因 Github 上的項目中去掉了背景)</p>
+<p>這次給大家展示的是一個由 Colyseus (Arena) + Defold 引擎製作的在綫五子棋游戲. 只需要一次編寫就可以在 Windows, Mac OS, Linux, IOS, Android, 以及各種瀏覽器上運行, 只要有屏幕的設備就可以互相連接, 是不是很酷?<br>
+<img src="/assets/wuzimu/wuzimu.png" alt="wuzimu.png"><br>
+(基於包體原因 Github 上的項目中去掉了背景)</p>
 <a id="more"></a>
-
 <ul>
-<li>客戶端<br>客戶端使用 Defold 引擎編寫, 這是一個高性能又跨平臺的 2D 游戲引擎.<br>Defold 使用的是 Lua 語言, 所以數組的索引是從 1 開始的, 這個需要注意一下.</li>
-</ul>
-<ul>
-<li><p>服務端<br>我們的 <a target="_blank" rel="noopener" href="https://docs.colyseus.io/">Colyseus 服務器</a>閃亮登場!<br>還不瞭解  Colyseus 的小夥伴們請參考<a target="_blank" rel="noopener" href="https://docs.colyseus.io/colyseus/">這裏</a>.<br>看看一發 npm 脚本命令建立一個完整的服務器.<br><img src="/assets/wuzimu/colyseus.png" alt="colyseus.png"><br>如果看到控制臺輸出了這句話, 那麽恭喜, 你的服務器建立成功!</p>
+<li>
+<p>客戶端<br>
+客戶端使用 Defold 引擎編寫, 這是一個高性能又跨平臺的 2D 游戲引擎.<br>
+Defold 使用的是 Lua 語言, 所以數組的索引是從 1 開始的, 這個需要注意一下.</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://console.colyseus.io/">Colyseus Arena</a><br>將服務器程序編譯並上傳至 <a target="_blank" rel="noopener" href="https://console.colyseus.io/">Colyseus Arena 服务</a>. Arena 服務是基於使用量計費的自動擴展的 Colyseus 云, 提供免費試用, 詳情參考<a target="_blank" rel="noopener" href="https://docs.colyseus.io/arena/">這裏</a>.<br><img src="/assets/wuzimu/arena.png" alt="arena.png"><br>上傳完代碼記得點擊 Deploy 按鈕, 否則不會生效哦!</p>
+<li>
+<p>服務端<br>
+我們的 <a target="_blank" rel="noopener" href="https://docs.colyseus.io/">Colyseus 服務器</a>閃亮登場!<br>
+還不瞭解  Colyseus 的小夥伴們請參考<a target="_blank" rel="noopener" href="https://docs.colyseus.io/colyseus/">這裏</a>.<br>
+看看一發 npm 脚本命令建立一個完整的服務器.<br>
+<img src="/assets/wuzimu/colyseus.png" alt="colyseus.png"><br>
+如果看到控制臺輸出了這句話, 那麽恭喜, 你的服務器建立成功!</p>
 </li>
-<li><p>開源參考<br><a target="_blank" rel="noopener" href="https://github.com/CocosGames/WuZiMu">https://github.com/CocosGames/WuZiMu</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://console.colyseus.io/">Colyseus Arena</a><br>
+將服務器程序編譯並上傳至 <a target="_blank" rel="noopener" href="https://console.colyseus.io/">Colyseus Arena 服务</a>. Arena 服務是基於使用量計費的自動擴展的 Colyseus 云, 提供免費試用, 詳情參考<a target="_blank" rel="noopener" href="https://docs.colyseus.io/arena/">這裏</a>.<br>
+<img src="/assets/wuzimu/arena.png" alt="arena.png"><br>
+上傳完代碼記得點擊 Deploy 按鈕, 否則不會生效哦!</p>
 </li>
-<li><p>在线试玩 (服务器已下线)<br><del><a target="_blank" rel="noopener" href="https://cocosgames.github.io/WuZiMu/">https://cocosgames.github.io/WuZiMu/</a></del><br><del><a href="https://cocosgames.com/assets/host/WuZiMu/">https://cocosgames.com/assets/host/WuZiMu/</a></del></p>
+<li>
+<p>開源參考<br>
+<a target="_blank" rel="noopener" href="https://github.com/CocosGames/WuZiMu">https://github.com/CocosGames/WuZiMu</a></p>
+</li>
+<li>
+<p>在线试玩 (服务器已下线)<br>
+~~<a target="_blank" rel="noopener" href="https://cocosgames.github.io/WuZiMu/~~">https://cocosgames.github.io/WuZiMu/~~</a><br>
+~~<a href="https://cocosgames.com/assets/host/WuZiMu/~~">https://cocosgames.com/assets/host/WuZiMu/~~</a></p>
 </li>
 </ul>
 

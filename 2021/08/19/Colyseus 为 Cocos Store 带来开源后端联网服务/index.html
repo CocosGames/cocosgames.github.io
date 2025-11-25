@@ -11,12 +11,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="自从 Cocos Creator 3.0 之后, 我们更新了 Cocos Store, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 Colyseus.">
+  <meta name="description" content="自从 Cocos Creator 3.0 之后, 我们更新了 Cocos Store, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方. Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 Colyseus.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Colyseus 为 Cocos Store 带来开源后端联网服务">
 <meta property="og:url" content="https://cocosgames.com/2021/08/19/Colyseus%20%E4%B8%BA%20Cocos%20Store%20%E5%B8%A6%E6%9D%A5%E5%BC%80%E6%BA%90%E5%90%8E%E7%AB%AF%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Coco&#39;s Games">
-<meta property="og:description" content="自从 Cocos Creator 3.0 之后, 我们更新了 Cocos Store, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 Colyseus.">
+<meta property="og:description" content="自从 Cocos Creator 3.0 之后, 我们更新了 Cocos Store, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方. Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 Colyseus.">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-08-19T10:49:26.208Z">
 <meta property="article:modified_time" content="2025-01-19T02:24:57.652Z">
@@ -239,9 +239,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-        <p>自从 Cocos Creator 3.0 之后, 我们更新了 <a target="_blank" rel="noopener" href="http://store.cocos.com/app/en">Cocos Store</a>, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.<br>Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 <a target="_blank" rel="noopener" href="https://www.colyseus.io/">Colyseus</a>.</p>
+        <p>自从 Cocos Creator 3.0 之后, 我们更新了 <a target="_blank" rel="noopener" href="http://store.cocos.com/app/en">Cocos Store</a>, 这是一个可以让开发者对外发布免费或者收费资源, 比如音乐, 图片, 代码之类的地方.<br>
+Cocos Store 及其资源在全世界范围内人气持续攀升. 精妙的工具不断涌现, 其背后的开发商功不可没. 其中具有代表性的就是由 Lucid Sight 团队开发的开源后端网络系统 <a target="_blank" rel="noopener" href="https://www.colyseus.io/">Colyseus</a>.</p>
 <a id="more"></a>
-
 <p>如果你缺乏后台开发经验或者在开发多人在线游戏时遇到麻烦, 那么开源服务器 Colyseus 及其技术团队将成为你的救星. Colyseus 是一款易用, 好用的多人在线游戏服务器, 这一点已被诸多 HTML5 和手机游戏证明.</p>
 <p>现在它来到了 <a target="_blank" rel="noopener" href="http://store.cocos.com/app/detail/2937">Cocos Store</a>, 我们通力合作确保其在 Cocos Creator 上完美运行, 并且筹划了未来的合作规划.</p>
 <p>这里我们有请 Colyseus 的创作者 <strong>Endel Dreyer</strong>, 与 Lucid Sight 的首席技术官, Colyseus 的拥有者 <strong>Farzi Zubair</strong> 接受采访.</p>
@@ -264,7 +264,7 @@
 <p><strong>C: 换个话题. 我们观察到多人在线游戏从以前的不到十人到如今的50, 100 甚至上千人于一个副本中同时在线. Colyseus 对于这种需求是如何满足的呢?</strong></p>
 <p>CT: 好问题. Colyseus 非常灵活，它可以为任何游戏类型或使用要求提供解决方案，因为它是开箱即用的基于房间的后台服务系统. 根据游戏复杂程度, 每个房间可以轻松支持 1500 个并发玩家 (CCU). 要是你想制作大型多人在线游戏 (MMO), 我们建议你把 “游戏世界” 分成若干个房间, 再用多线程同步房间逻辑.</p>
 <p>我们在自己的 MMO 游戏 CSC 中使用了这种 “分割游戏世界” 的方案. 具体来说就是把宇宙根据坐标分割为多个房间. 通过设置房间参数就能实现这个功能, 然后再让客户端根据房间参数加入各个房间即可.</p>
-<p>举个例子, 当一个玩家进入游戏时, 他的坐标是太阳系 (我们设计的) 0, 0 点即太阳的位置. 当他移动的时候, 我们根据区域定义他的新坐标. 比如一个区域是 10,000 平方公里. 当他远离太阳时, 他的坐标可能是九宫格区域之一 (0,1 1,0 1,1 -1,0 以此类推.. – 房间命名比如 “sol_0_1 =  0,1” 这样). 为了移动平滑, 我们在一开始就让玩家进入了这 9 个房间. 即初始房间和九宫格的另外 8 个房间. 玩家移动时不断地离开房间和加入新房间, 使得他始终能收到当前坐标房间和移动方向目标房间的信息. 加入多个房间的另一用途就是为玩家提供全局消息 / 聊天消息 (比如 “sol_chat, sol_global” 房间). 全 3D 世界的话也可以使用类似机制, 不同的就是把二维坐标改成三维的.</p>
+<p>举个例子, 当一个玩家进入游戏时, 他的坐标是太阳系 (我们设计的) 0, 0 点即太阳的位置. 当他移动的时候, 我们根据区域定义他的新坐标. 比如一个区域是 10,000 平方公里. 当他远离太阳时, 他的坐标可能是九宫格区域之一 (0,1 1,0 1,1 -1,0 以此类推… – 房间命名比如 “sol_0_1 =  0,1” 这样). 为了移动平滑, 我们在一开始就让玩家进入了这 9 个房间. 即初始房间和九宫格的另外 8 个房间. 玩家移动时不断地离开房间和加入新房间, 使得他始终能收到当前坐标房间和移动方向目标房间的信息. 加入多个房间的另一用途就是为玩家提供全局消息 / 聊天消息 (比如 “sol_chat, sol_global” 房间). 全 3D 世界的话也可以使用类似机制, 不同的就是把二维坐标改成三维的.</p>
 <p>对于服务缩放, 有许多解决方法, 主要取决于你的游戏类型和游戏设计. 每个服务器上每个房间应该容纳多少人上限要合理. 这个数值很大程度上取决于游戏类型, 每秒信息数量以及游戏逻辑复杂程度. 这就是我们为 Colyseus 提供的 SaaS 托管解决方案的魅力所在. 作为程序员, 你大可不必担心服务器容量, 比如新开房间, 游戏世界随玩家数量增长而变大之类的压力. 我们的 Colyseus Arena 系统能根据你的游戏服务压力情况自动部署新服务器以保持平衡, 确保每个房间都能高效运作.</p>
 <p><strong>C: Colyseus 为开发者提供了什么样的功能?</strong></p>
 <p>CT: 除了刚才提到的 “房间” 机制, Colyseus 还有独创的同步机制以取代平常的收发消息功能. 改变服务器状态时客户端都会收到回调反馈.</p>
@@ -276,9 +276,11 @@
 <p><strong>C: 感觉不错啊. 要是开发者开始使用 Colyseus 开发游戏, 你能给出一些对提升游戏有帮助的建议吗?</strong></p>
 <p>CT: 任何第一次制作多人在线游戏的开发者都应该牢记以下事情.</p>
 <ol>
-<li><p>开发游戏时就要考虑到作弊者，并使服务器尽可能具有权威性——因为作弊会导致游戏的完全失败. 一旦您的游戏上线，您的团队会忙不迭地工作并且急于修补漏洞，而作弊部分可能会成为最为高昂的资源消耗。这就是为什么我总是建议开发人员从一开始就尝试使服务器尽可能具有权威性, 将可能影响游戏结果的逻辑和功能限制在服务器代码中, 杜绝玩家找到作弊或破解游戏的方法.</p>
+<li>
+<p>开发游戏时就要考虑到作弊者，并使服务器尽可能具有权威性——因为作弊会导致游戏的完全失败. 一旦您的游戏上线，您的团队会忙不迭地工作并且急于修补漏洞，而作弊部分可能会成为最为高昂的资源消耗。这就是为什么我总是建议开发人员从一开始就尝试使服务器尽可能具有权威性, 将可能影响游戏结果的逻辑和功能限制在服务器代码中, 杜绝玩家找到作弊或破解游戏的方法.</p>
 </li>
-<li><p>专注于游戏体验, 把服务器端交给值得信赖的 SaaS 服务 – 自托管非常适合开发调试, 但是一旦开始就要尽快找到你的 DevOps 解决方案或者 SaaS 服务. 我们见到许多开发商到离游戏上线还剩最后几周, 都还没有考虑服务器或 SaaS 的事.</p>
+<li>
+<p>专注于游戏体验, 把服务器端交给值得信赖的 SaaS 服务 – 自托管非常适合开发调试, 但是一旦开始就要尽快找到你的 DevOps 解决方案或者 SaaS 服务. 我们见到许多开发商到离游戏上线还剩最后几周, 都还没有考虑服务器或 SaaS 的事.</p>
 </li>
 </ol>
 <p>有一个叫做 Agones 的开源服务器就做得很好.  它运行在基于 Kubernetes  上的大量 docker 容器中. 但是, 要是独立开发者或者从未与托管服务打过交道, 你会发现忽略了服务器环境这个大问题.  这通常会导致服务器匹配和 SDK 整合的失败. 所以做游戏除了开发工作还不够, 还需要聘请 DevOps 工程师然后找到合适的服务器. 对于小型游戏工作室来说, 这无疑是一笔巨大的前期成本, 并且早晚都要支付.</p>

@@ -243,13 +243,16 @@
 <a id="more"></a>
 <p>Colyseus SDK 在 Cocos Creator 的运用上与 <a target="_blank" rel="noopener" href="https://docs.colyseus.io/getting-started/javascript-client/">JavaScript SDK</a> 类似. 主要区别在于如何通过 Cocos Creator 的 <a target="_blank" rel="noopener" href="https://docs.colyseus.io/colyseus/getting-started/cocos-creator/#importing-from-the-extension">TypeScript 组件来引入服务</a>.</p>
 <blockquote>
-<p>想要具体实例?<br>看看 <a target="_blank" rel="noopener" href="https://github.com/colyseus/cocos-demo-tictactoe">Tic Tac Toe 项目</a>.</p>
+<p>想要具体实例?<br>
+看看 <a target="_blank" rel="noopener" href="https://github.com/colyseus/cocos-demo-tictactoe">Tic Tac Toe 项目</a>.</p>
 </blockquote>
-<h4 id="1-安装扩展插件"><a href="#1-安装扩展插件" class="headerlink" title="1. 安装扩展插件"></a>1. 安装扩展插件</h4><ul>
+<h4 id="1-安装扩展插件"><a class="header-anchor" href="#1-安装扩展插件">¶</a>1. 安装扩展插件</h4>
+<ul>
 <li>打开 <a target="_blank" rel="noopener" href="https://store.cocos.com/app/en/detail/2937/">Cocos Store</a> (菜单: “扩展” » “商店”)</li>
 <li>搜索 “Colyseus SDK”</li>
-<li>下载扩展插件<h4 id="2-更新-tsconfig-json-文件"><a href="#2-更新-tsconfig-json-文件" class="headerlink" title="2. 更新 tsconfig.json 文件"></a>2. 更新 tsconfig.json 文件</h4></li>
+<li>下载扩展插件</li>
 </ul>
+<h4 id="2-更新-tsconfig-json-文件"><a class="header-anchor" href="#2-更新-tsconfig-json-文件">¶</a>2. 更新 tsconfig.json 文件</h4>
 <p>确认 <code>&quot;compilerOptions&quot;</code> 类目下有 <code>&quot;esModuleInterop&quot;: true</code>:</p>
 <pre><code>// ...
 
@@ -259,17 +262,20 @@
   &quot;esModuleInterop&quot;: true
   // ...
 &#125;
-// ...</code></pre>
-<h4 id="3-导入扩展插件"><a href="#3-导入扩展插件" class="headerlink" title="3. 导入扩展插件"></a>3. 导入扩展插件</h4><p>根据路径导入 Colyseus 扩展插件:</p>
-<pre><code>import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;</code></pre>
+// ...
+</code></pre>
+<h4 id="3-导入扩展插件"><a class="header-anchor" href="#3-导入扩展插件">¶</a>3. 导入扩展插件</h4>
+<p>根据路径导入 Colyseus 扩展插件:</p>
+<pre><code>import Colyseus from 'db://colyseus-sdk/colyseus.js';
+</code></pre>
 <p>下面给出一个更详细的示例方便大家应用于自己的项目之中.</p>
 <p>把如下内容命名为 <code>NetworkManager.ts</code> 存入项目的 <code>assets</code> 文件夹里.</p>
-<pre><code>import &#123; _decorator, Component, Node &#125; from &#39;cc&#39;;
+<pre><code>import &#123; _decorator, Component, Node &#125; from 'cc';
 const &#123; ccclass, property &#125; = _decorator;
 
-import Colyseus from &#39;db://colyseus-sdk/colyseus.js&#39;;
+import Colyseus from 'db://colyseus-sdk/colyseus.js';
 
-@ccclass(&#39;NetworkManager&#39;)
+@ccclass('NetworkManager')
 export class NetworkManager extends Component &#123;
     @property hostname = &quot;localhost&quot;;
     @property port = 2567;
@@ -282,7 +288,7 @@ export class NetworkManager extends Component &#123;
         // 实例化 Colyseus 客户端
         // 连接到 (ws|wss)://hostname[:port]
         this.client = new Colyseus.Client(`$&#123;this.useSSL ? &quot;wss&quot; : &quot;ws&quot;&#125;://$&#123;this.hostname&#125;$&#123;([443, 80].includes(this.port) || this.useSSL) ? &quot;&quot; : `:$&#123;this.port&#125;`&#125;`);
-
+    
         // 连接到 room
         this.connect();
     &#125;
@@ -292,7 +298,7 @@ export class NetworkManager extends Component &#123;
             this.room = await this.client.joinOrCreate(&quot;my_room&quot;);
 
             console.log(&quot;joined successfully!&quot;);
-            console.log(&quot;user&#39;s sessionId:&quot;, this.room.sessionId);
+            console.log(&quot;user's sessionId:&quot;, this.room.sessionId);
 
             this.room.onStateChange((state) =&gt; &#123;
                 console.log(&quot;onStateChange: &quot;, state);
@@ -306,22 +312,30 @@ export class NetworkManager extends Component &#123;
             console.error(e);
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>然后就可以把 NetworkManager 作为组件安放在 Cocos Creator 的任意节点上.</p>
 <p>因为上面用到了 @property 装饰词, 所以 hostname, port 和 useSSL 这些变量都可以在 Cocos Creator 中修改:</p>
 <hr>
-<h4 id="另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件"><a href="#另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件" class="headerlink" title="另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)"></a>另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)</h4><ul>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/colyseus/colyseus.js/releases">从 GitHub 上下载最新版 <code>colyseus-js-client.zip</code></a>.</p>
+<h4 id="另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件"><a class="header-anchor" href="#另一种方法-手动将-colyseus-js-文件导入项目-不使用扩展插件">¶</a>另一种方法: 手动将 colyseus.js 文件导入项目 (不使用扩展插件)</h4>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://github.com/colyseus/colyseus.js/releases">从 GitHub 上下载最新版 <code>colyseus-js-client.zip</code></a>.</p>
 </li>
-<li><p>把 <code>colyseus-js-client.zip</code> 里的文件解压到 <code>assets/</code> 文件夹里.</p>
+<li>
+<p>把 <code>colyseus-js-client.zip</code> 里的文件解压到 <code>assets/</code> 文件夹里.</p>
 </li>
-<li><p>把 <code>colyseus.js</code> 和 <code>colyseus.d.ts</code> 文件移动到 Cocos Creator 项目的 <code>scripts</code> 文件夹里.</p>
+<li>
+<p>把 <code>colyseus.js</code> 和 <code>colyseus.d.ts</code> 文件移动到 Cocos Creator 项目的 <code>scripts</code> 文件夹里.</p>
 </li>
-<li><p>在资源面板点击 <code>colyseus.js</code>, 开启 “Import As Plugin” (详见下文图片)</p>
+<li>
+<p>在资源面板点击 <code>colyseus.js</code>, 开启 “Import As Plugin” (详见下文图片)</p>
 </li>
-<li><p><strong>TypeScript</strong>: 使用 <code>import Colyseus from &quot;./colyseus.js&quot;;</code> 引入</p>
+<li>
+<p><strong>TypeScript</strong>: 使用 <code>import Colyseus from &quot;./colyseus.js&quot;;</code> 引入</p>
 </li>
-<li><p><strong>JavaScript</strong>: 使用 <code>const Colyseus = require(&quot;./colyseus.js&quot;);</code> 引入</p>
+<li>
+<p><strong>JavaScript</strong>: 使用 <code>const Colyseus = require(&quot;./colyseus.js&quot;);</code> 引入</p>
 </li>
 </ul>
 
